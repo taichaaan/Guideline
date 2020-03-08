@@ -21,13 +21,16 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
  <br>
  
 ### 画像名
-画像のファイル名は、単語間は「_」（アンダースコア）、Modifierを表す時は「-」（ハイフン）を使用してください。    
+画像のファイル名は、単語間は「_」（アンダースコア）、状態を表す時は「-」（ハイフン）を使用してください。    
 例えば、色が違う場合などがこれに当たります。
+また、ページや種類ごとでディレクトリ名を変えているので、画像の先頭に top などの ページ名は不要としています。
 ```
 // 例
 assets/img/common/logo_horizontal-black.svg
 assets/img/common/logo_horizontal-white.svg
 assets/img/common/logo_vertical-black.svg
+
+[内容]_[連番]-[状態].[拡張子]
 ```
  <br>
 
@@ -50,11 +53,8 @@ smoothScroll.js
 ```
  <br>
  
-### html / class
-下記のflocssを参照してください。
- <br>
  
-### 変数名
+### 変数名 [JavaScript,php]
 スネークケースを使用してください。  
 文字の単語間にアンダーバーを使用し、ひと単語が長いなど 単語を読み易くするため 大文字の使用も有りとしています。  
 ```
@@ -64,7 +64,7 @@ const snakeBlack_road = 'hoge;
 ```
  <br>
  
-### 関数名
+### 関数名 [JavaScript,php]
 キャメルケースを使用してください。  
 最初の単語以外の文字の先頭を大文字を使用してください。  
 ```
