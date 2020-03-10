@@ -30,7 +30,7 @@ assets/img/common/logo_horizontal-black.svg
 assets/img/common/logo_horizontal-white.svg
 assets/img/common/logo_vertical-black.svg
 
-[内容]_[連番]-[状態].[拡張子]
+[大内容]_[小内容]_..._[連番]-[状態].[拡張子]
 ```
  <br>
 
