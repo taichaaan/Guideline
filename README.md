@@ -59,8 +59,8 @@ smoothScroll.js
 文字の単語間にアンダーバーを使用し、ひと単語が長いなど 単語を読み易くするため 大文字の使用も有りとしています。  
 ```
 // 例
-const snake_road = 'hoge;
-const snakeBlack_road = 'hoge;
+const snake_road = 'hoge';
+const snakeBlack_road = 'hoge';
 ```
  <br>
  
