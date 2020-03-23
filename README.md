@@ -1,7 +1,7 @@
 # outline
 
 コーディングの際、迷うと品質とスピードの両方が失われます。  
-本ガイドラインは、その迷っている時間を少なくし、品質とスピードを一定に保つためのものです。   
+本ガイドラインは、迷っている時間を少なくし、品質とスピードを一定に保つためのものです。   
 
 あくまで心得の様なもので、この型に合わせる必要はなく、臨機応変にカスタマイズして良いです。  
 その為、常にガイドラインは変化（バージョンアップ）します。 
@@ -26,6 +26,44 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 
 
  <br>
+ 
+# Directory
+```
+root/
+	├ include/
+	│	├ functions.php
+	│	├ meta.php
+	│	├ js.php
+	│	├ loading.php
+	│	├ preload-svg.php
+	│	├ header.php
+	│	├ footer.php
+	│	├ aside.php
+	│	└ header.php
+	├ assets/
+	│	├ img/
+	│	│	├ common/
+	│	│	├ meta/
+	│	│	└ pagename/
+	│	├ svg/
+	│	├ css/
+	│	│	├ common.min.css
+	│	│	├ wp-admin.min.css
+	│	│	├ wp-editor.min.css
+	│	│	└ wp-login.min.css
+	│	├ js/
+	│	│	├ wp-admin.min.js
+	│	│	├ library.min.js
+	│	│	├ component-form.min.js
+	│	│	├ theme-top.min.js
+	│	│	└ common.min.js
+	│	├ font/
+	│	└ pdf/
+	├ wp/
+	└ index.php
+```
+
+
 
 # Common
  
