@@ -134,9 +134,11 @@ const getWindowHeight = function (){
 また、関数の最初は、なにをしている関数なのかを明確にするため、以下のような文字を使用してください。
 | name | description |
 ----|---- 
+| init | 初期化 |
 | set | 値を代入する場合に用いる |
 | get | データの取得 |
 | add | 追加 |
+| remove | 削除 |
 
 
 
