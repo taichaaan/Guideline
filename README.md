@@ -6,9 +6,9 @@
 あくまで心得の様なもので、この型に合わせる必要はなく、臨機応変にカスタマイズして良いです。  
 その為、常にガイドラインは変化（バージョンアップ）します。 
 
- <br>
- 
 
+ 
+ <br>
 # コーディングの定義
 ### 基本
 + 予測しやすい
@@ -26,7 +26,6 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 
 
  <br>
- 
 # Directory
 ```
 root/
@@ -64,7 +63,7 @@ root/
 ```
 
 
-
+ <br>
 # Common
  
 ## 命名規則
@@ -139,8 +138,8 @@ const getWindowHeight = function (){
 
 
  <br>
- <br>
  
+<br> 
 # Sass
  
 ## flocss
