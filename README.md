@@ -61,6 +61,7 @@ root/
 	│	├ font/
 	│	└ pdf/
 	├ wp/
+	├ pagename/
 	└ index.php
 ```
 
