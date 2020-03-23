@@ -83,9 +83,9 @@ root/
 また、ページや種類ごとでディレクトリ名を変えているので、画像の先頭に top などの ページ名は不要としています。
 ```
 // 例
-assets/img/common/logo_horizontal-black.svg
-assets/img/common/logo_horizontal-white.svg
-assets/img/common/logo_vertical-black.svg
+logo_horizontal-black.svg
+logo_horizontal-white.svg
+logo_vertical-black.svg
 
 [大内容]_[小内容]_..._[連番]-[状態].[拡張子]
 ```
