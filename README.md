@@ -6,6 +6,10 @@
 あくまで心得の様なもので、この型に合わせる必要はなく、臨機応変にカスタマイズして良いです。  
 その為、常にガイドラインは変化（バージョンアップ）します。 
 
+<br>
+マークダウン方式についてはこちらを確認してください。  
+https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
+
 
  
  <br>
@@ -19,10 +23,6 @@
 
  以上4つが CSS Architecture で提唱された「良いcss」 の定義です。  
  これらが保たれているかを念頭においてコーディングしてください。
- <br>
-
-マークダウン方式についてはこちらを確認してください。  
-https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 
 
 
@@ -90,7 +90,6 @@ logo_vertical-black.svg
 
 [大内容]_[小内容]_..._[連番]-[状態].[拡張子]
 ```
- <br>
 
 ### ディレクトリ名
 単語間はハイフンを使用してください。  
@@ -99,7 +98,6 @@ logo_vertical-black.svg
 /about-us/
 /portfolio-item/
 ```
- <br>
 
 ### jsファイル名
 キャメルケースを使用してください。  
@@ -108,9 +106,7 @@ logo_vertical-black.svg
 objectFit.js
 isCurrent.js
 smoothScroll.js
-```
- <br>
- 
+``` 
  
 ### 変数名 [JavaScript,php]
 スネークケースを使用してください。  
@@ -120,7 +116,6 @@ smoothScroll.js
 const snake_road = 'hoge';
 const snakeBlack_road = 'hoge';
 ```
- <br>
  
 ### 関数名 [JavaScript,php]
 キャメルケースを使用してください。  
@@ -148,11 +143,67 @@ const getWindowHeight = function (){
 <br> 
 
 # Sass
- 
-## flocss
+flocssを採用しています。  
+https://github.com/hiloki/flocss
 
-### クラス名
-クラスは、flocssのものをbaseに使っています。
+
+## Directory
+```
+└ sass/
+	├ foundation/
+	│	├ animation/
+	│	├ genetal/
+	│	│	├ function/
+	│	│	├ mixin/
+	│	│	└ variable/
+	│	├ base/
+	│	│	├ _reset.scss
+	│	│	└ _base.scss
+	│	├ font/
+	│	└ library/
+	├ layout/
+	├ object/
+	│	├ component/
+	│	├ project/
+	│	├ utility/
+	│	├ js/
+	│	└ wp/
+	├ theme/
+	│	└ _pagename.scss
+	├ ua/
+	├ wp-admin.scss
+	├ wp-editor.scss
+	├ wp-login.scss
+	└ common.scss
+```
+- foundation -- プロジェクトにおける基本的なスタイルを定義します
+	- animation -- アニメーションを定義します
+	- general -- mixinや変数など、プロジェクト全体で使用するスタイルを定義します
+		- function -- 関数をファイル別で定義します。
+		- mixin -- mixinをファイル別で定義します。
+		- variable -- 変数をファイル別で定義します。
+	- font -- アニメーションを定義します
+	- base -- フォントの読み込みがある場合、定義します。
+	- library -- jsの外部プラグインでcssがある場合は、拡張子をscssに変えて定義します。
+- layout -- ページを構成するスタイルを定義します。
+- object -- 繰り返し使用できるスタイルを定義します
+	- component -- 再利用できるパターンとして、小さな単位のモジュールを定義します。
+	- project -- 複数のcomponentからなる、もしくはsection単位などの大きな単位のモジュールを定義します。
+	- utility -- わずかなスタイルの調整のための便利クラスなどを定義します。
+- theme -- objectには属さない、ページ固有のスタイルを定義します。
+- ua -- UserAgentを使用し、ブラウザや端末などでスタイルを時に定義します。
+
+
+
+## themeについて
+objectは、繰り返し使用できるスタイルで、ページ固有のスタイルを定義する場所がないです。  
+そのため、sassディレクトリ直下にthemeディレクトリを追加し、そこをページ固有のスタイルを定義するディレクトリにします。  
+pageという名前が良かったのですが、projectのpとかぶっているため、themeにしています。
+
+
+
+## クラス名
+クラスは、flocssをbaseに使っています。
 ただ、状態を表すものについては、クラスが長くなってしまうのを防ぐ為、ハイフンから始めて良いものとしています。
 
 ```
