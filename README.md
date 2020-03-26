@@ -50,20 +50,21 @@ root/
 	│	├ svg/
 	│	├ css/
 	│	│	├ common.min.css
+	│	│	├ theme-ページ名.min.css
 	│	│	├ wp-admin.min.css
 	│	│	├ wp-editor.min.css
 	│	│	└ wp-login.min.css
 	│	├ js/
-	│	│	├ wp-admin.min.js
-	│	│	├ library.min.js
+	│	│	├ library.js
 	│	│	├ module.min.js
-	│	│	├ component-コンポーネント名.min.js
+	│	│	├ common.min.js
 	│	│	├ theme-ページ名.min.js
-	│	│	└ common.min.js
+	│	│	├ component-コンポーネント名.min.js
+	│	│	└ wp-admin.min.js 
 	│	├ font/
 	│	└ pdf/
 	├ wp/
-	├ pagename/
+	├ ページ名/
 	└ index.php
 ```
 
@@ -77,7 +78,7 @@ root/
 
 
 ## JavaScript
-- library.min.js -- 外部ライブラリを集めたJavaScriptファイル
+- library.js -- 外部ライブラリを集めたJavaScriptファイル（圧縮なし）
 - module.min.js -- 自作プラグインを集めたJavaScriptファイル
 - common.min.js -- ページ共通のJavaScriptファイル
 - theme-ページ名.min.js -- ページ固有のJavaScriptファイル
