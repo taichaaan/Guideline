@@ -66,6 +66,24 @@ root/
 	└ index.php
 ```
 
+## css
+- common.min.css -- ページ共通のcssファイル
+- theme-ページ名.min.css --  ページ固有のcssファイル
+- wp-admin.min.css --  WordPressの全ユーザの管理画面用cssファイル
+- wp-editor.min.css --  WordPressの編集者の管理画面用cssファイル
+- wp-login.min.css --  WordPressのログイン画面用cssファイル
+※themeが少ない場合は、commonと合わせても問題ない
+
+
+## JavaScript
+- library.min.js -- 外部ライブラリを集めたJavaScriptファイル
+- module.min.js -- 自作プラグインを集めたJavaScriptファイル
+- common.min.js -- ページ共通のJavaScriptファイル
+- theme-ページ名.min.js -- ページ固有のJavaScriptファイル
+- component-コンポーネント名.min.js -- フォームなど部品のJavaScriptファイル
+- wp-admin.min.js  -- WordPressの全ユーザの管理画面用JavaScriptファイル
+※themeが少ない場合は、commonと合わせても問題ない
+
 
  <br>
  
