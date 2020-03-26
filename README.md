@@ -55,8 +55,9 @@ root/
 	│	├ js/
 	│	│	├ wp-admin.min.js
 	│	│	├ library.min.js
-	│	│	├ component-form.min.js
-	│	│	├ theme-top.min.js
+	│	│	├ module.min.js
+	│	│	├ component-コンポーネント名.min.js
+	│	│	├ theme-ページ名.min.js
 	│	│	└ common.min.js
 	│	├ font/
 	│	└ pdf/
