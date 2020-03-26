@@ -431,23 +431,19 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 # WordPress
 
-## サブディレクトリ
-WordPressは、サブディレクトリ上階層で表示する形を採用しています。  
-
-### メリット
-ルート直下がスッキリし、可視性が上がる。
-
-## 方法
-https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
-
-
-
-
 ## Directory
 ```
 └ root/
 	└ wp/
 ```
+
+## サブディレクトリ 
+WordPressは、サブディレクトリ上階層で表示する形を採用しています。  
+ルート直下がスッキリし、可視性が上がるメリットがあります。
+
+### 方法
+https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
+
 
 
 
