@@ -85,7 +85,9 @@ root/
 - wp-admin.min.css --  WordPressの全ユーザの管理画面用cssファイル
 - wp-editor.min.css --  WordPressの編集者の管理画面用cssファイル
 - wp-login.min.css --  WordPressのログイン画面用cssファイル
-※themeが少ない場合は、commonと合わせても問題ない
+
+※themeが少ない場合は、commonと合わせても問題ない  
+※style.cssは、どこのスタイルか解らず抽象的なため廃止し、common（共通）にしています。
 
 
 ## JavaScript
@@ -95,8 +97,9 @@ root/
 - theme-ページ名.min.js -- ページ固有のJavaScriptファイル
 - component-コンポーネント名.min.js -- フォームなど部品のJavaScriptファイル
 - wp-admin.min.js  -- WordPressの全ユーザの管理画面用JavaScriptファイル
-※themeが少ない場合は、commonと合わせても問題ない
 
+※themeが少ない場合は、commonと合わせても問題ない  
+※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
  <br>
  
