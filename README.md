@@ -175,7 +175,7 @@ const getWindowHeight = function (){
 <br> 
 
 # Sass
-flocssを採用しています。  
+flocssをベースにカスタマイズしています。  
 https://github.com/hiloki/flocss
 
 
