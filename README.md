@@ -304,9 +304,70 @@ https://github.com/hiloki/flocss
 ```
 
 
+## component、projectの判別について
+https://qiita.com/uggds/items/d904b2f9a103c37a25fa
+
+
 ## component
-componentでは、使い回しができるパーツを定義します。
-例）
+componentでは、使い回しができるパーツを定義します。  
+各サイトで あまり変わることはないです。  
+例）ボタンやタイトル、段落、リスト、テーブル、ページャー、column、flex、gird、inner、content、space  など
+
+
+## project
+projectでは、複数のcomponentからなる大きなブロックを定義します。  
+複数のcomponentがなくても、フォームやブログの詳細記事など今後増える可能性があるものもprojectに含めます。  
+また、大きすぎるパーツもprojectに含んで良いものとしています。　　
+各サイト固有のprojectが定義されます。  
+例）form、article、サイト固有project
+
+
+## utility
+utilityでは、単一スタイルを定義します。  
+可変で値が変わるものは、componentで定義してください。  
+省略する場合は、Emmentの記述などを参考にしてください。  
+例）display、margin、padding、text-align  など
+
+```
+.u-bg-none  { background-color: rgba(0,0,0,0); }
+.u-bg-white { background-color: #fff; }
+```
+```
+.u-ib{ display: inline-block; }
+.u-inline { display: inline; }
+.u-block { display: block; }
+.u-n { display: none; }
+
+@include mq-up(lg){
+	.u-n-mqUp-lg { display: none; }
+}
+@include mq-down(lg){
+	.u-n-mqDown-lg { display: none; }
+}
+```
+```
+.u-t-right   { text-align: right; }
+.u-t-left    { text-align: left; }
+.u-t-center  { text-align: center; }
+.u-t-justify { text-align: justify; }
+```
+```
+.u-font-normal  { font-weight: normal; }
+.u-font-bold    { font-weight: bold; }
+.u-font-lighter { font-weight: lighter; }
+.u-font-bolder  { font-weight: bolder; }
+.u-font-700     { font-weight: 700; }
+```
+```
+.u-p-relative{ position: relative; }
+.u-p-absolute{ position: absolute; }
+
+.u-p-relative-0{ position: relative; z-index: 0; }
+.u-p-relative-1{ position: relative; z-index: 1; }
+.u-p-relative-2{ position: relative; z-index: 2; }
+```
+
+
 
 
 ## theme
@@ -321,11 +382,11 @@ pageという名前が良かったのですが、projectのpとかぶってい�
 
 ```
 <p class="c-btn c-btn--black">
- <!-- 通常はこれですが -->
+ <!-- 通常 -->
 </p>
 
 <p class="c-btn -black">
- <!-- これも有りです -->
+ <!-- これも有り -->
 </p>
 ```
 ```
