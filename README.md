@@ -467,3 +467,41 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 - User Role Editor
 
 
+
+
+
+
+
+<br> 
+
+# 開発環境
+
+
+## Directory
+```
+└ project/
+	├ dev/
+	│	├ dev_html/
+	│	│	└ assets/
+	│	└ gulp/
+	│		├ gulpfile.js
+	│		├ package.json
+	│		├ package-lock.json
+	│		└ node_modules/
+	└ public_html/
+```
+
+devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。  
+public_htmlに
+devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。  
+devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。
+
+
+
+## Gulp
+タスクランナーは、Gulpを使用しています。
+- pugのコンパイル、圧縮
+- sassのコンパイル、結合、圧縮
+- JavaScriptの結合、圧縮
+- 画像、svgの圧縮
+- 上記以外のファイルの移動
