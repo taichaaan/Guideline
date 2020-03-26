@@ -44,8 +44,7 @@ root/
 	│	├ preload-svg.php
 	│	├ header.php
 	│	├ footer.php
-	│	├ aside.php
-	│	└ header.php
+	│	└ aside.php
 	├ assets/
 	│	├ img/
 	│	│	├ common/
