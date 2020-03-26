@@ -421,7 +421,7 @@ pageという名前が良かったのですが、projectのpとかぶってい�
 - theme-ページ名.min.js -- ページ固有のScriptを記述します。
 - component-コンポーネント名.min.js -- 複数のページで使用するが、処理が多いものなどを記述するファイルです。フォームやスライダーなどが該当します。
 
-themeやcomponentを分けた理由は、ページ数が多いサイトだとscript.min.jsがどうしても多くなるところが気になっていたからです。　　
+themeやcomponentを分けた理由は、ページ数が多いサイトだとscript.min.jsがどうしても多くなるところが気になっていたからです。  
 小規模のサイトやJavaScriptが少ないサイトでは、themeやcomponentはcommon.jsに記述して良いです。
 
 
