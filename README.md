@@ -36,7 +36,6 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 ```
 root/
 	├ include/
-	
 	│	├ functions.php
 	│	├ meta.php
 	│	├ js.php
@@ -201,7 +200,7 @@ https://github.com/hiloki/flocss
 
 ## Directory
 ```
-└ sass/
+└ dev/dev_html/assets/sass/
 	├ foundation/
 	│	├ animation/
 	│	├ genetal/
@@ -402,6 +401,28 @@ pageという名前が良かったのですが、projectのpとかぶってい�
 <br> 
 
 # JavaScript
+
+今までscript.jsにまとめていましたが、ページの読み込み速度等を考慮して 種類別に分割することにしました。
+
+## Directory
+```
+└ dev/dev_html/assets/js/
+	├ library/
+	├ module/
+	├ object/
+	│	├ component/
+	│	├ project/
+	│	├ utility/
+	│	├ js/
+	│	└ wp/
+	├ theme/
+	│	└ _pagename.scss
+	├ ua/
+	├ wp-admin.scss
+	├ wp-editor.scss
+	├ wp-login.scss
+	└ common.scss
+```
 
 
 <br> 
