@@ -317,7 +317,7 @@ componentでは、使い回しができるパーツを定義します。
 ## project
 projectでは、複数のcomponentからなる大きなブロックを定義します。  
 複数のcomponentがなくても、フォームやブログの詳細記事など今後増える可能性があるものもprojectに含めます。  
-また、大きすぎるパーツもprojectに含んで良いものとしています。　　
+また、大きすぎるパーツもprojectに含んで良いものとしています。  
 各サイト固有のprojectが定義されます。  
 例）form、article、サイト固有project
 
