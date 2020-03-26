@@ -333,10 +333,10 @@ utilityでは、単一スタイルを定義します。
 .u-bg-white { background-color: #fff; }
 ```
 ```
-.u-ib{ display: inline-block; }
+.u-ib     { display: inline-block; }
 .u-inline { display: inline; }
-.u-block { display: block; }
-.u-n { display: none; }
+.u-block  { display: block; }
+.u-n      { display: none; }
 
 @include mq-up(lg){
 	.u-n-mqUp-lg { display: none; }
