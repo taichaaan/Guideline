@@ -193,6 +193,30 @@ section.t-top-visual
 
 <br> 
 
+# css
+
+よく使うcss
+
+```
+:nth-of-type(X)  /* X番目 */
+:nth-of-type(n+X)  /* X番目以降 */
+:not(:first-of-type)  /* 最初以外 */
+:not(:last-of-type)  /* 最後以外 */
+:nth-last-of-type(n+X)  /* 最後からX番目以前 */
+```
+```
+:nth-of-type(X)  /* X番目 */
+:nth-of-type(n+X)  /* X番目以降 */
+:not(:first-of-type)  /* 最初以外 */
+:not(:last-of-type)  /* 最後以外 */
+:nth-last-of-type(n+X)  /* 最後からX番目以前 */
+```
+
+
+
+
+<br> 
+
 # Sass
 flocssをベースにカスタマイズしています。  
 https://github.com/hiloki/flocss
@@ -426,6 +450,14 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 
 
+## プラグイン
+- gsap --  https://greensock.com/
+- imagesLoaded  --  https://imagesloaded.desandro.com/
+- Polyfill sticky  --  https://github.com/wilddeer/stickyfill
+
+
+
+
 
 <br> 
 
@@ -447,7 +479,7 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 
 
 
-## プラグイン
+## プラグイン 
 
 ### 必須
 - Classic Editor
