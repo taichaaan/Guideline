@@ -1,4 +1,6 @@
-# Outline
+ <br>
+ 
+ # Outline
 
 コーディングの際、迷うと品質とスピードの両方が失われます。  
 本ガイドラインは、迷っている時間を少なくし、品質とスピードを一定に保つためのものです。   
@@ -14,7 +16,7 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 
  
  <br>
-  <br>
+ <br>
  
 # コーディングの定義
 ### 基本
@@ -34,6 +36,7 @@ https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa
 ```
 root/
 	├ include/
+	
 	│	├ functions.php
 	│	├ meta.php
 	│	├ js.php
