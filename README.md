@@ -492,9 +492,9 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 ```
 
 devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。  
-public_htmlに
-devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。  
-devディレクトリの中に、pugやsass、結合前のJavascriptなどの元データを入れておきます。
+public_htmlにそれらがコンパイルされる仕様です。
+phpはコンパイルしないので、public_htmlにそのままファイルを作成、記述します。  
+
 
 
 
