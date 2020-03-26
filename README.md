@@ -46,7 +46,7 @@ root/
 	│	├ img/
 	│	│	├ common/
 	│	│	├ meta/
-	│	│	└ pagename/
+	│	│	└ ページ名/
 	│	├ svg/
 	│	├ css/
 	│	│	├ common.min.css
@@ -67,6 +67,13 @@ root/
 	├ ページ名/
 	└ index.php
 ```
+
+## assets
+img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
+svg -- インラインで仕様するsvgを格納
+font -- フォントをディレクトリ単位で格納
+pdf -- PDFを格納
+
 
 ## css
 - common.min.css -- ページ共通のcssファイル
@@ -243,4 +250,11 @@ pageという名前が良かったのですが、projectのpとかぶってい�
  }
 }
 ```
+
+
+
+<br> 
+
+# JavaScript
+
 
