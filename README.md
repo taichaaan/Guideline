@@ -110,7 +110,7 @@ logo_vertical-black.svg
 単語間はハイフンを使用してください。  
 ```
 // 例
-/about-us/
+/about/
 /portfolio-item/
 ```
 
@@ -186,14 +186,14 @@ section.t-top-visual
 :not(:last-of-type)  /* 最後以外 */
 :nth-last-of-type(n+X)  /* 最後からX番目以前 */
 ```
-```
-:nth-of-type(X)  /* X番目 */
-:nth-of-type(n+X)  /* X番目以降 */
-:not(:first-of-type)  /* 最初以外 */
-:not(:last-of-type)  /* 最後以外 */
-:nth-last-of-type(n+X)  /* 最後からX番目以前 */
-```
+|  |  |
+----|---- 
+| object-fit | <img> や <video> などの中身を、コンテナーにどのようにはめ込むかを設定できる。 |
+| text-transform | テキストを大文字表記、小文字表記を指定できる。 |
+| will-change | 要素の変更が予測されているかブラウザに助言できる。最終解決手段で使用する。 |
 
+1万人に聞いた、2019年の最新CSS使用状況  
+https://qiita.com/rana_kualu/items/6d967b4d4cd4fc59d7e2
 
 
 
@@ -519,3 +519,5 @@ phpはコンパイルしないので、public_htmlにそのままファイルを
 - JavaScriptの結合、圧縮
 - 画像、svgの圧縮
 - 上記以外のファイルの移動
+
+
