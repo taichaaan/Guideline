@@ -52,6 +52,9 @@ root/
 	└ index.php
 ```
 
+## include
+各ページで
+
 ## assets
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
 - svg -- インラインで仕様するsvgを格納
