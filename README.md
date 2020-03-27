@@ -521,6 +521,38 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 
 
+## AnimationFrame
+```
+///////////////////////////////////////////////////////////////
+// variable
+///////////////////////////////////////////////////////////////
+const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			const cancelAnimationFrame  = window.cancelAnimationFrame || window.mozcancelAnimationFrame || window.webkitcancelAnimationFrame || window.mscancelAnimationFrame;
+			window.requestAnimationFrame = requestAnimationFrame;
+			window.cancelAnimationFrame  = cancelAnimationFrame;
+			
+///////////////////////////////////////////////////////////////
+// animation
+///////////////////////////////////////////////////////////////	
+function animation(){
+	/* animation */
+	if( 止めたい時の条件 ){
+		window.cancelAnimationFrame( requestId );
+	}
+}
+	
+///////////////////////////////////////////////////////////////
+// animationLoop
+///////////////////////////////////////////////////////////////
+let requestId = '';
+function animationLoop(){
+	requestId = window.requestAnimationFrame( animationLoop );
+	animation();
+}
+animationLoop();
+```
+
+
 
 
 <br> 
