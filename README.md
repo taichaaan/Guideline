@@ -323,15 +323,27 @@ componentでは、使い回しができるパーツを定義します。
 	display: flex;
 	justify-content: space-between;
 }
-.c-flex-center{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.c-flex-2-column{
+.c-flex--2-column{
 	> *{
 		width: percentage( 500 / 1080 );
  	}
+}
+.c-flex--m30{
+	margin-left: -30px;
+	> * {
+		margin-left: 30px;
+	}
+}
+```
+```
+.c-column{
+	display: flex;
+	flex-wrap: wrap;
+}
+.c-column--2{
+	> * {
+		width: percentage( 500 / 1080 );
+	}
 }
 ```
 ```
