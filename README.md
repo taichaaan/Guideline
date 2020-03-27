@@ -318,6 +318,49 @@ componentでは、使い回しができるパーツを定義します。
 各サイトで あまり変わることはないです。  
 例）ボタンやタイトル、段落、リスト、テーブル、ページャー、column、flex、gird、inner、content、space  など
 
+```
+.c-flex{
+	display: flex;
+	justify-content: space-between;
+}
+.c-flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.c-flex-2-column{
+	> *{
+		width: percentage( 500 / 1080 );
+ 	}
+}
+```
+```
+.c-paragraphs{
+	> * {
+		&:not(:last-of-type){
+			margin-bottom: 30 / 16 + em;
+		}
+	}
+}
+.c-paragraph-small{
+	&,*{
+		@include mq-up{
+			@include line-height(14,28);
+			@include font14;
+		}
+		@include mq-down{
+			@include line-height(16,30);
+		}
+		@include mq-updown-free{
+			@include font13;
+		}
+		@include mq-down(sm){
+			@include font12;
+		}
+	}
+}
+```
+
 
 ## project
 projectでは、複数のcomponentからなる大きなブロックを定義します。  
