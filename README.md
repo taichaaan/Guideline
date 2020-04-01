@@ -541,13 +541,30 @@ const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestA
 			window.requestAnimationFrame = requestAnimationFrame;
 			window.cancelAnimationFrame  = cancelAnimationFrame;
 			
+			
+///////////////////////////////////////////////////////////////
+// stopAnimation
+///////////////////////////////////////////////////////////////	
+function stopAnimation(x,y){
+	if(
+		mouse_clientX == Math.round( x * 100) / 100 &&
+		mouse_clientY == Math.round( y * 100) / 100 &&
+		start_flg == false
+	){
+		window.cancelAnimationFrame( requestId );
+		setTimeout(function(){
+			start_flg = true;
+		},20);
+	}
+}
+		
 ///////////////////////////////////////////////////////////////
 // animation
 ///////////////////////////////////////////////////////////////	
 function animation(){
 	/* animation */
 	if( 止めたい時の条件 ){
-		window.cancelAnimationFrame( requestId );
+		stopAnimation();
 	}
 }
 	
