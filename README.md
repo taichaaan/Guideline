@@ -59,9 +59,6 @@ root/
 - js.php -- body閉じタグの手前に配置するjsを記述するファイルです。headタグ内が都合が良い場合は、meta.phpに直書きしてください。
 
 
-### 
-
-
 ## assets
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
 - svg -- インラインで仕様するsvgを格納
@@ -92,6 +89,18 @@ root/
 ※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
  <br>
+ 
+ 
+# Breakpoint
+
+| type | range |
+----|---- 
+| pc | 1024px ~ |
+| tablet | 561px ~ 1023px |
+| smartphone | ~ 560px |
+
+メディアクエリは
+
  
 # Common
 
