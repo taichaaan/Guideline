@@ -99,7 +99,27 @@ root/
 | tablet | 561px ~ 1023px |
 | smartphone | ~ 560px |
 
-メディアクエリは
+メディアクエリは、sassのmixinで管理しています。  
+上記の範囲はあくまで基礎で、768pxや1000pxなど 状況に応じて可変してください。
+
+```
+'ss': 'screen and (min-width: 321px)',
+'xs': 'screen and (min-width: 415px)',
+'sm': 'screen and (min-width: 561px)',
+'md': 'screen and (min-width: 769px)',
+'lg': 'screen and (min-width: 1024px)',
+'xl': 'screen and (min-width: 1280px)',
+'fhd': 'screen and (min-width: 1921px)',
+```
+```
+'ss': 'screen and (max-width: 320px)',
+'xs': 'screen and (max-width: 414px)',
+'sm': 'screen and (max-width: 560px)',
+'md': 'screen and (max-width: 768px)',
+'lg': 'screen and (max-width: 1023px)',
+'xl': 'screen and (max-width: 1279px)',
+'fhd': 'screen and (max-width: 1920px)',
+```
 
  
 # Common
