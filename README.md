@@ -212,6 +212,9 @@ const getWindowHeight = function (){
 | name | description |
 ----|---- 
 | init | 初期化 |
+| base | 基礎 |
+| basis | 基礎 |
+| basic | 基礎 |
 | set | 値を代入する場合に用いる |
 | get | データの取得 |
 | add | 追加 |
