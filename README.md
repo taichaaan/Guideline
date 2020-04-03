@@ -685,7 +685,7 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 ?>
 ```
 
-## 複数の条件を満たす投稿
+## 複数の条件（タクソノミーやタグ）を満たす投稿
 ```
 <?php
 	$args = array(
