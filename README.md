@@ -685,6 +685,35 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 ?>
 ```
 
+## 複数の条件を満たす投稿
+```
+<?php
+	$args = array(
+		'post_type'      => 'post',   
+		'post_status'    => 'publish',
+		'posts_per_page' => 4,
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'slug',
+				'terms' => array(
+					'news',
+				),
+			),
+			array(
+				'taxonomy' => 'post_tag',
+				'field' => 'slug',
+				'terms' => array(
+					'development-camp',
+				),
+			),
+			'relation' => 'AND'
+		),
+	);
+	$the_query = new WP_Query( $args );
+?>
+```
+
 
 
 
