@@ -654,6 +654,27 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 - User Role Editor
 
 
+## 基本
+
+## トップページ、固定ページなど
+```
+<?php
+	$args = array(
+		'post_type'      => 'event',   // カスタム投稿タイプの名称を入れる
+		'post_status'    => 'publish', // 公開している投稿のみ
+		'posts_per_page' => 4          // 件数
+	);
+	$the_query = new WP_Query( $args );
+	if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+?>
+<?php
+	endwhile;
+	else:
+		echo '<p>現在、投稿はありません。</p>';
+	endif;
+	wp_reset_postdata();
+?>
+```
 
 
 
