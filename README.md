@@ -655,6 +655,14 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 
 
 ## 基本
+```
+<?php if ( have_posts() ) : while ( have_posts()) : the_post(); ?>
+	<?php the_time('Y.m.d'); ?> <!-- 時間 -->
+	<?php the_title(); ?>       <!-- タイトル -->
+	<?php the_content(); ?>     <!-- 投稿内容 -->
+	<?php the_permalink(); ?>   <!-- リンク -->
+<?php endwhile ; endif ;?>
+```
 
 ## トップページ、固定ページなど
 ```
