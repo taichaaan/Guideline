@@ -19,6 +19,7 @@
 root/
 	├ include/
 	│	├ functions.php
+	│	├ variable.php
 	│	├ meta.php
 	│	├ js.php
 	│	├ loading.php
@@ -698,7 +699,11 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 └ project/
 	├ dev/
 	│	├ dev_html/
-	│	│	└ assets/
+	│	│	├ assets/
+	│	│	├ _include
+	│	│	│	├ functions.pug
+	│	│	│	└ variable.pug
+	│	│	└ hoge.pug
 	│	└ gulp/
 	│		├ gulpfile.js
 	│		├ package.json
