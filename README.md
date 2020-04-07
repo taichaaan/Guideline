@@ -247,7 +247,31 @@ section.t-top-visual
 
 # css
 
-よく使うcss
+## 命名規則
+cssファイルでコーディングをする場合、命名規則はBEMにしています。  
+class名を見ただけで種類（レイアウト・共通・ページ）が理解できるように、頭には commonやlayout,ページ名を入れてください。  
+flocssとほぼ同じなので、詳しくは<a href="#flocss">flocssへのリンク</a>を参照ください。
+
+
+### sample
+```
+<div class="common-card">
+	<figure class="common-card__figure">
+		<img src="" alt="">
+	</figure>
+	<div class="common-card__content">
+		<h2 class="common-card__title">タイトルが入ります。</h2>
+		<p class="common-card__time"><time>0000.00.00</time></p>
+		<p class="common-card__paragraph">テキストテキストテキストテキスト</p>
+		<p class="common-card__more">
+			<a href="">MORE</a>
+		</p>
+	</div>
+</div>
+```
+
+
+## よく使うcss
 
 ```
 :nth-of-type(X)  /* X番目 */
