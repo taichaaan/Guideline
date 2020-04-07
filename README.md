@@ -250,12 +250,12 @@ section.t-top-visual
 ## 命名規則
 cssファイルでコーディングをする場合、命名規則はBEMにしています。  
 class名を見ただけで種類（レイアウト・共通・ページ）が理解できるように、頭には commonやlayout,ページ名を入れてください。  
-flocssとほぼ同じなので、詳しくは<a href="#flocss">flocssへのリンク</a>を参照ください。
+flocssとほぼ同じなので、詳しくは<a href="#flocss">flocss</a>を参照ください。
 
 
 ### sample
 ```
-<div class="common-card">
+<div class="common-card common-card--new">
 	<figure class="common-card__figure">
 		<img src="" alt="">
 	</figure>
@@ -400,6 +400,24 @@ https://github.com/hiloki/flocss
  ua
 ------------------------------------------------------------ */
 @import './ua/**/*.scss';
+```
+
+
+## flocss
+```
+<div class="c-card c-card--new">
+	<figure class="c-card__figure">
+		<img src="" alt="">
+	</figure>
+	<div class="c-card__content">
+		<h2 class="c-card__title">タイトルが入ります。</h2>
+		<p class="c-card__time"><time>0000.00.00</time></p>
+		<p class="c-card__paragraph">テキストテキストテキストテキスト</p>
+		<p class="c-card__more">
+			<a href="">MORE</a>
+		</p>
+	</div>
+</div>
 ```
 
 
