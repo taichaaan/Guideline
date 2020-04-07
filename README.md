@@ -53,21 +53,21 @@ root/
 	└ index.php
 ```
 
-## include
+## Include
 各ページで読み込ませる共通パーツを格納するディレクトリです。
 - functions.php -- 関数を記述するファイルです。また、変数やサイト全体の設定も合わせて記述しています。
 - meta.php -- headタグ内のファイルです。headはheader.phpと名前が似ているため、meta.phpにしています。
 - js.php -- body閉じタグの手前に配置するjsを記述するファイルです。headタグ内が都合が良い場合は、meta.phpに直書きしてください。
 
 
-## assets
+## Assets
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
 - svg -- インラインで仕様するsvgを格納
 - font -- フォントをディレクトリ単位で格納
 - pdf -- PDFを格納
 
 
-## css
+## CSS
 - common.min.css -- ページ共通のcssファイル
 - theme-ページ名.min.css --  ページ固有のcssファイル
 - wp-admin.min.css --  WordPressの全ユーザの管理画面用cssファイル
@@ -199,7 +199,7 @@ const snake_road = 'hoge';
 const snakeBlack_road = 'hoge';
 ```
  
-### 関数名 [JavaScript,php]
+### 関数名 [JavaScript,PHP]
 キャメルケースを使用してください。  
 最初の単語以外の文字の先頭を大文字を使用してください。  
 ```
@@ -245,7 +245,7 @@ section.t-top-visual
 
 <br> 
 
-# css
+# CSS
 
 ## 命名規則
 cssファイルでコーディングをする場合、命名規則はBEMにしています。  
@@ -253,7 +253,7 @@ class名を見ただけで種類（レイアウト・共通・ページ）が理
 flocssとほぼ同じなので、詳しくは<a href="#flocss">flocss</a>を参照ください。
 
 
-### sample
+### Sample
 ```
 <div class="common-card common-card--new">
 	<figure class="common-card__figure">
@@ -271,7 +271,7 @@ flocssとほぼ同じなので、詳しくは<a href="#flocss">flocss</a>を参�
 ```
 
 
-## よく使うcss
+## よく使うCSS
 
 ```
 :nth-of-type(X)  /* X番目 */
@@ -404,6 +404,25 @@ https://github.com/hiloki/flocss
 
 
 ## flocss
+
+
+
+### Prefix
+
+| name | description |
+----|---- 
+| .l- | layout |
+| .c- | Component |
+| .p- | Project |
+| .u- | Utility |
+| .t- | Theme |
+| .ua- | UserAgent |
+| .js- | JavaScript |
+| .wp- | WordPress |
+| .is- | Status |
+
+
+### Sample
 ```
 <div class="c-card c-card--new">
 	<figure class="c-card__figure">
@@ -540,16 +559,13 @@ utilityでは、単一スタイルを定義します。
 ```
 
 
-
-
 ## theme
 objectは、繰り返し使用できるスタイルで、ページ固有のスタイルを定義する場所がないです。  
 そのため、sassディレクトリ直下にthemeディレクトリを追加し、そこをページ固有のスタイルを定義するディレクトリにします。  
 pageという名前が良かったのですが、projectのpとかぶっているためthemeにしています。
 
 
-
-## クラス名
+## class名
 状態を表すものについては、クラスが長くなってしまうのを防ぐ為、ハイフンから始めて良いものとしています。
 
 ```
@@ -599,7 +615,7 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 
 
-## プラグイン
+## Plugin
 - gsap --  https://greensock.com/
 - imagesLoaded  --  https://imagesloaded.desandro.com/
 - Polyfill sticky  --  https://github.com/wilddeer/stickyfill
@@ -677,7 +693,7 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 
 
 
-## プラグイン 
+## Plugin 
 
 ### 必須
 - Classic Editor
