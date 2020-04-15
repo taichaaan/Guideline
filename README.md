@@ -7,8 +7,7 @@
 + 保守しやすい
 + 拡張しやすい
 
- 以上4つが CSS Architecture で提唱された「良いcss」 の定義です。  
- これらが保たれているかを念頭においてコーディングしてください。
+これらが保たれているかを念頭においてコーディングしてください。
 
 
 
@@ -241,6 +240,64 @@ const getWindowHeight = function (){
 //- ----------------------------------------
 section.t-top-visual
 ```
+
+
+## Template
+
+共通部分はincludeディレクトリで管理し、各ファイルでrequireかincludeで読み込んでください。
+
+### index.php
+ファイルの最上部で、titleやdescriptionを変数に代入してください。　　
+- $directory -- パンクズリストやjson-ldなどで使用する変数です。配列で ('ページ名','ディレクトリ') を指定してください。<br>ディレクトリは $home_url 以下を指定してください。
+- $preload -- rel="preload" as="image" で先読みした画像を配列で指定してください。
+- $style -- common.min.cssなどの共通ファイル以外に、ページ固有のcssなど読み込ませたい場合、配列でcssのhrefを指定してください。
+- $script -- common.min.jsなどの共通ファイル以外に、ページ固有のcssなど読み込ませたい場合、配列でscriptのsrcを指定してください。
+
+
+```
+<?php require_once( dirname( __FILE__ ) . '/include/functions.php' ); ?>
+<?php
+	$title       = $top_title;
+	$description = $top_description;
+	$keywords    = $top_keywords;
+	$directory   = array(
+		array('ホーム','')
+	);
+	$preload = array(
+		$home_url . 'assets/img/top/visual_01.jpg',
+	);
+	$style = array(
+	);
+	$script = array(
+		$home_url . 'assets/js/theme-top.min.js',
+	);
+ ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<?php require_once($web_root.$home_url.'include/meta.php'); ?>
+</head>
+<body data-root="<?= $home_url; ?>">
+<?php require_once($web_root.$home_url.'include/preload-svg.php'); ?>
+<?php require_once($web_root.$home_url.'include/loading.php'); ?>
+<?php require_once($web_root.$home_url.'include/header.php'); ?>
+	<main>
+		<!-- comment -->
+		<!-- /comment -->
+	</main>
+<?php require_once($web_root.$home_url.'include/aside.php'); ?>
+<?php require_once($web_root.$home_url.'include/footer.php'); ?>
+<?php require_once($web_root.$home_url.'include/js.php'); ?>
+</body>
+</html>
+```
+
+
+## Headタグ
+headタグは、
+
+
+
 
 
 <br> 
