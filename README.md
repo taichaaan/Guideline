@@ -591,7 +591,10 @@ pageという名前が良かったのですが、projectのpとかぶってい�
 
 # JavaScript
 
-今までscript.jsにまとめていましたが、読み込み速度や今後の管理を考慮して 意味合い・種類別に分割することにしました。  
+jQueryは基本的に使用していません。  
+プラグインなどで仕方がない場合のみ使用してください。　　
+
+又、今までscript.jsにまとめていましたが、読み込み速度や今後の管理を考慮して 意味合い・種類別に分割することにしました。  
 
 ## Directory
 ```
@@ -614,12 +617,21 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 小規模のサイトやJavaScriptが少ないサイトでは、themeやcomponentはcommon.jsに記述して良いです。
 
 
-
 ## Plugin
 - gsap --  https://greensock.com/
 - imagesLoaded  --  https://imagesloaded.desandro.com/
 - Polyfill sticky  --  https://github.com/wilddeer/stickyfill
 
+
+## Module
+独自プラグインをmodule.min.jsで使用しています。  
+
+### よく使用する独自プラグイン
+- js-useragent -- https://github.com/taichaaan/js-useragent/
+- js-smoothScroll -- https://github.com/taichaaan/js-smoothScroll/
+- js-popup -- https://github.com/taichaaan/js-popup/
+- js-objectFit- -- https://github.com/taichaaan/js-objectFit/
+- js-lazyload -- https://github.com/taichaaan/js-lazyload/
 
 
 ## AnimationFrame
