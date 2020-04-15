@@ -618,20 +618,20 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 
 ## Plugin
-- gsap --  https://greensock.com/
-- imagesLoaded  --  https://imagesloaded.desandro.com/
-- Polyfill sticky  --  https://github.com/wilddeer/stickyfill
+- gsap --  <a href="https://greensock.com/" target="_blank">https://greensock.com/</a>
+- imagesLoaded  --  <a href="https://imagesloaded.desandro.com/" target="_blank">https://imagesloaded.desandro.com/</a>
+- Polyfill sticky  --  <a href="https://github.com/wilddeer/stickyfill" target="_blank">https://github.com/wilddeer/stickyfill</a>
 
 
 ## Module
 独自プラグインをmodule.min.jsで使用しています。  
 
 ### よく使用する独自プラグイン
-- js-useragent -- https://github.com/taichaaan/js-useragent/
-- js-smoothScroll -- https://github.com/taichaaan/js-smoothScroll/
-- js-popup -- https://github.com/taichaaan/js-popup/
-- js-objectFit- -- https://github.com/taichaaan/js-objectFit/
-- js-lazyload -- https://github.com/taichaaan/js-lazyload/
+- js-useragent -- <a href="https://github.com/taichaaan/js-useragent/" target="_blank">https://github.com/taichaaan/js-useragent/</a>
+- js-smoothScroll -- <a href="https://github.com/taichaaan/js-smoothScroll/" target="_blank">https://github.com/taichaaan/js-smoothScroll/</a>
+- js-popup -- <a href="https://github.com/taichaaan/js-popup/" target="_blank">https://github.com/taichaaan/js-popup/</a>
+- js-objectFit- -- <a href="https://github.com/taichaaan/js-objectFit/" target="_blank">https://github.com/taichaaan/js-objectFit/</a>
+- js-lazyload -- <a href="https://github.com/taichaaan/js-lazyload/" target="_blank">https://github.com/taichaaan/js-lazyload/</a>
 
 
 ## AnimationFrame
