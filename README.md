@@ -54,7 +54,7 @@ root/
 
 ## Include
 各ページで読み込ませる共通パーツを格納するディレクトリです。
-- functions.php -- 関数を記述するファイルです。また、変数やサイト全体の設定も合わせて記述しています。
+- functions.php -- 関数を記述するファイルです。また、変数やサイト全体の設定も合わせて記述しています。変数と別々にするか悩んでます。
 - meta.php -- headタグ内のファイルです。headはheader.phpと名前が似ているため、meta.phpにしています。
 - js.php -- body閉じタグの手前に配置するjsを記述するファイルです。headタグ内が都合が良い場合は、meta.phpに直書きしてください。
 
@@ -294,7 +294,53 @@ section.t-top-visual
 
 
 ## Headタグ
-headタグは、
+headタグは、include/meta.php で共通管理しています。  
+header.phpと名前がややこしくなるので、meta.phpという名前にしています。
+
+```
+<meta charset="UTF-8">
+<title><?= $title; ?></title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="all">
+<meta name="description" content="<?= $description; ?>">
+<meta name="keywords" content="<?= $keywords; ?>">
+<meta name="copyright" content="© <?= $author; ?>">
+<meta name="author" content="<?= $author; ?>">
+<meta name="theme-color" content="<?= $theme_color; ?>">
+<meta name="msapplication-TileColor" content="<?= $theme_color; ?>">
+<meta name="application-name" content="<?= $site_name; ?>">
+<meta name="apple-mobile-web-app-title" content="<?= $site_name; ?>">
+<meta name="thumbnail" content="<?= $ogp_url; ?>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= $title;?>">
+<meta name="twitter:description" content="<?= $description; ?>">
+<meta name="twitter:image:src" content="<?= $ogp_url; ?>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="<?= $site_name; ?>">
+<meta property="og:title" content="<?= $title;?>">
+<meta property="og:description" content="<?= $description; ?>">
+<meta property="og:url" content="<?= $url; ?>">
+<meta property="og:image" content="<?= $ogp_url; ?>">
+<meta property="og:locale" content="ja_JP">
+<link rel="dns-prefetch" href="//webfont.fontplus.jp">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="preload" as="style" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>">
+<link rel="preload" as="script" href="<?= $home_url; ?>assets/js/library.js<?= $cashDate; ?>">
+<link rel="preload" as="script" href="<?= $home_url; ?>assets/js/module.min.js<?= $cashDate; ?>">
+<link rel="index" href="<?= $top_url; ?>">
+<link rel="canonical" href="<?= $url; ?>">
+<link rel="contents" href="<?= $top_url; ?>sitemap.xml" title="サイトマップ">
+<link rel="icon" type="image/png" href="<?= $home_url; ?>assets/img/meta/icon-512x512.png">
+<link rel="apple-touch-icon" href="<?= $home_url; ?>assets/img/meta/apple-touch-icon.png">
+<!-- googlefont -->
+<link rel="stylesheet" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>">
+<!-- fontplus -->
+<script type="application/ld+json"></script>
+<!-- Google Analytics -->
+```
 
 
 
