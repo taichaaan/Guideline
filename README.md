@@ -34,7 +34,7 @@ root/
 	│	├ svg/
 	│	├ css/
 	│	│	├ common.min.css
-	│	│	├ theme-ページ名.min.css
+	│	│	├ page-ページ名.min.css
 	│	│	├ wp-admin.min.css
 	│	│	├ wp-editor.min.css
 	│	│	└ wp-login.min.css
@@ -42,7 +42,7 @@ root/
 	│	│	├ library.js
 	│	│	├ module.min.js
 	│	│	├ common.min.js
-	│	│	├ theme-ページ名.min.js
+	│	│	├ page-ページ名.min.js
 	│	│	├ component-コンポーネント名.min.js
 	│	│	└ wp-admin.min.js 
 	│	├ font/
@@ -68,7 +68,7 @@ root/
 
 ## CSS
 - common.min.css -- ページ共通のcssファイル
-- theme-ページ名.min.css --  ページ固有のcssファイル
+- page-ページ名.min.css --  ページ固有のcssファイル
 - wp-admin.min.css --  WordPressの全ユーザの管理画面用cssファイル
 - wp-editor.min.css --  WordPressの編集者の管理画面用cssファイル
 - wp-login.min.css --  WordPressのログイン画面用cssファイル
@@ -81,11 +81,11 @@ root/
 - library.js -- 外部ライブラリを集めたJavaScriptファイル（圧縮なし）
 - module.min.js -- 自作プラグインを集めたJavaScriptファイル
 - common.min.js -- ページ共通のJavaScriptファイル
-- theme-ページ名.min.js -- ページ固有のJavaScriptファイル
+- page-ページ名.min.js -- ページ固有のJavaScriptファイル
 - component-コンポーネント名.min.js -- フォームなど部品のJavaScriptファイル
 - wp-admin.min.js  -- WordPressの全ユーザの管理画面用JavaScriptファイル
 
-※themeが少ない場合は、commonと合わせても問題ない  
+※pageが少ない場合は、commonと合わせても問題ない  
 ※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
  <br>
@@ -269,7 +269,7 @@ section.t-top-visual
 	$style = array(
 	);
 	$script = array(
-		$home_url . 'assets/js/theme-top.min.js',
+		$home_url . 'assets/js/page-top.min.js',
 	);
  ?>
 <!DOCTYPE html>
@@ -422,7 +422,7 @@ https://github.com/hiloki/flocss
 	│	├ utility/
 	│	├ js/
 	│	└ wp/
-	├ theme/
+	├ page/
 	│	└ _pagename.scss
 	├ ua/
 	├ wp-admin.scss
@@ -444,7 +444,7 @@ https://github.com/hiloki/flocss
 	- component -- 再利用できるパターンとして、小さな単位のモジュールを定義します。
 	- project -- 複数のcomponentからなる、もしくはsection単位などの大きな単位のモジュールを定義します。
 	- utility -- わずかなスタイルの調整のための便利クラスなどを定義します。
-- theme -- objectには属さない、ページ固有のスタイルを定義します。
+- page -- objectには属さない、ページ固有のスタイルを定義します。
 - ua -- UserAgentを使用し、ブラウザや端末などでスタイルを時に定義します。
 
 
@@ -494,9 +494,9 @@ https://github.com/hiloki/flocss
 
 
 /* ------------------------------------------------------------
-// Theme
+// Page
 ------------------------------------------------------------ */
-@import './theme/**/*.scss';
+@import './page/**/*.scss';
 
 
 /* ------------------------------------------------------------
@@ -519,6 +519,7 @@ https://github.com/hiloki/flocss
 | .p- | Project |
 | .u- | Utility |
 | .t- | Theme |
+| .pg- | Page |
 | .ua- | UserAgent |
 | .js- | JavaScript |
 | .wp- | WordPress |
@@ -662,10 +663,10 @@ utilityでは、単一スタイルを定義します。
 ```
 
 
-## theme
+## page(旧名:theme)
 objectは、繰り返し使用できるスタイルで、ページ固有のスタイルを定義する場所がないです。  
-そのため、sassディレクトリ直下にthemeディレクトリを追加し、そこをページ固有のスタイルを定義するディレクトリにします。  
-pageという名前が良かったのですが、projectのpとかぶっているためthemeにしています。
+そのため、sassディレクトリ直下にpageディレクトリを追加し、そこをページ固有のスタイルを定義するディレクトリにします。  
+プレフィックスは、pg です。
 
 
 ## class名
@@ -705,7 +706,7 @@ jQueryは基本的に使用していません。
 	├ library/
 	├ module/
 	├ common.js
-	├ theme-ページ名.min.js
+	├ page-ページ名.min.js
 	├ component-コンポーネント名.min.js
 	└ wp-admin.min.js 
 ```
@@ -713,7 +714,7 @@ jQueryは基本的に使用していません。
 - library -- 外部ライブラリーを格納するディレクトリ。Gulpで結合してlibrary.jsとして圧縮せず出力します。
 - module -- 独自プラグインを格納するディレクトリ。今まではscript.min.jsとしていましたが、区別するために分けました。Gulpで結合してmodule.min.jsとして圧縮して出力します
 - common.js -- 全ページ共通のScriptなどを記述します。sassのobjectディレクトリに関するものは、処理が少なければcommon.jsに記述しても良いです。
-- theme-ページ名.min.js -- ページ固有のScriptを記述します。
+- page-ページ名.min.js -- ページ固有のScriptを記述します。
 - component-コンポーネント名.min.js -- 複数のページで使用するが、処理が多いものなどを記述するファイルです。フォームやスライダーなどが該当します。
 
 themeやcomponentを分けた理由は、ページ数が多いサイトだとscript.min.jsがどうしても多くなるところが気になっていたからです。  
