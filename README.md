@@ -256,6 +256,7 @@ section.t-top-visual
 
 
 ```
+<?php require_once( dirname( __FILE__ ) . '/include/variable.php' ); ?>
 <?php require_once( dirname( __FILE__ ) . '/include/functions.php' ); ?>
 <?php
 	$title       = $top_title;
