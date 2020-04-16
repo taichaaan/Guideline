@@ -727,7 +727,8 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 
 
 ## Module
-独自プラグインをmodule.min.jsで使用しています。  
+module.min.jsでは、独自プラグインを圧縮して出力しています。  
+また、独自プラグイン以外にも base.js（jsの諸々設定）もmodule.min.jsに含めています。
 
 ### よく使用する独自プラグイン
 - js-useragent -- <a href="https://github.com/taichaaan/js-useragent/" target="_blank">https://github.com/taichaaan/js-useragent/</a>
@@ -743,9 +744,9 @@ themeやcomponentを分けた理由は、ページ数が多いサイトだとscr
 // variable
 ///////////////////////////////////////////////////////////////
 const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-			const cancelAnimationFrame  = window.cancelAnimationFrame || window.mozcancelAnimationFrame || window.webkitcancelAnimationFrame || window.mscancelAnimationFrame;
-			window.requestAnimationFrame = requestAnimationFrame;
-			window.cancelAnimationFrame  = cancelAnimationFrame;
+const cancelAnimationFrame  = window.cancelAnimationFrame || window.mozcancelAnimationFrame || window.webkitcancelAnimationFrame || window.mscancelAnimationFrame;
+window.requestAnimationFrame = requestAnimationFrame;
+window.cancelAnimationFrame  = cancelAnimationFrame;
 			
 			
 ///////////////////////////////////////////////////////////////
