@@ -352,9 +352,23 @@ header.phpと名前がややこしくなるので、meta.phpという名前に�
 
 # CSS
 
+
+## ファイル構成
+cssを圧縮せず納品する場合、その後の管理がしやすいように ファイルを分割してください。  
+ファイル分割の場合、flocssのuaをディレクトリで分ける概念は廃止してください。  
+下記の順番でheadタグ内に記述してください。  
+
+- base.css -- flocssのFoundationを記述するファイル
+- layout.css -- flocssのLayoutを記述するファイル
+- common.css -- flocssのObjectを記述するファイル
+- page-pagename.css -- flocssのPageを記述するファイル
+- theme-color.css -- flocssのThemeを記述するファイル
+
+
 ## 命名規則
-cssファイルでコーディングをする場合、命名規則はBEMにしています。  
-class名を見ただけで種類（レイアウト・共通・ページ）が理解できるように、頭には commonやlayout,ページ名を入れてください。  
+cssファイルでコーディングをする場合、命名規則は基本的にBEMにしています。  
+sassをコンパイルする場合は、命名規則はflocssでも有としますが、ファイル構成は必ず守ってください。  
+BEMの場合、class名を見ただけで種類（レイアウト・共通・ページ）が理解できるように、頭には commonやlayout,ページ名を入れてください。  
 flocssとほぼ同じなので、詳しくは<a href="#flocss">flocss</a>を参照ください。
 
 
@@ -426,6 +440,8 @@ https://github.com/hiloki/flocss
 	│	└ wp/
 	├ page/
 	│	└ _pagename.scss
+	├ theme/
+	│	└ _colorname.scss
 	├ ua/
 	├ wp-admin.scss
 	├ wp-editor.scss
@@ -447,6 +463,7 @@ https://github.com/hiloki/flocss
 	- project -- 複数のcomponentからなる、もしくはsection単位などの大きな単位のモジュールを定義します。
 	- utility -- わずかなスタイルの調整のための便利クラスなどを定義します。
 - page -- objectには属さない、ページ固有のスタイルを定義します。
+- theme -- 色が違う場合のスタイルを定義します。これは全体的な色合いを意味します。
 - ua -- UserAgentを使用し、ブラウザや端末などでスタイルを時に定義します。
 
 
