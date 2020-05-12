@@ -548,6 +548,7 @@ https://github.com/hiloki/flocss
 | .u- | Utility |
 | .t- | Theme |
 | .pg- | Page |
+| .lp- | LP |
 | .ua- | UserAgent |
 | .js- | JavaScript |
 | .wp- | WordPress |
@@ -746,7 +747,7 @@ jQueryは基本的に使用していません。
 - component-コンポーネント名.min.js -- 複数のページで使用するが、処理が多いものなどを記述するファイルです。フォームやスライダーなどが該当します。
 
 themeやcomponentを分けた理由は、ページ数が多いサイトだとscript.min.jsがどうしても多くなるところが気になっていたからです。  
-小規模のサイトやJavaScriptが少ないサイトでは、themeやcomponentはcommon.jsに記述して良いです。
+LPや小規模のサイトでは、pageやtheme、componentはcommon.jsに記述して良いです。
 
 
 ## Plugin
@@ -814,6 +815,23 @@ function animationLoop(){
 }
 animationLoop();
 ```
+
+
+
+
+<br>
+
+# LP
+ランディングページなどの1ページサイトは、クラス名や画像格納のディレクトリ名に悩まされます。  
+トップページと言えばトップページですが、1ページのみで 派生がないのに 「top」 という名前を使用する事を躊躇します。  
+  
+1ページもののサイトは、topではなく 「lp」 という名前に全て置き換えて制作してください。  
+その他、LayoutやComponent、Utility は通常通り管理してください。
+
+以下は、topの名前を置き換えた 例です。
+- .pg-top- → .lp-
+- /img/top/- → /img/lp/
+- page-top.css- → lp.css
 
 
 
