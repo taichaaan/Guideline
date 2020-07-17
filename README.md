@@ -229,7 +229,9 @@ const getWindowHeight = function (){
 | get | データの取得 |
 | add | 追加 |
 | remove | 削除 |
+| is | 期待する状態になっているか |
 
+https://murashun.jp/blog/20181109-01.html
 
 
 <br> 
