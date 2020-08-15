@@ -20,7 +20,6 @@ root/
 	│	├ functions.php
 	│	├ variable.php
 	│	├ meta.php
-	│	├ js.php
 	│	├ loading.php
 	│	├ preload-svg.php
 	│	├ header.php
@@ -57,7 +56,6 @@ root/
 - variable.php -- 変数を記述するファイルです。wp-loadもここでこなっています。
 - functions.php -- 関数を記述するファイルです。
 - meta.php -- headタグ内のファイルです。headはheader.phpと名前が似ているため、meta.phpにしています。
-- js.php -- body閉じタグの手前に配置するjsを記述するファイルです。headタグ内が都合が良い場合は、meta.phpに直書きしてください。
 
 
 ## Assets
