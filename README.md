@@ -7,8 +7,6 @@
 + 保守しやすい
 + 拡張しやすい
 
-これらが保たれているかを念頭においてコーディングしてください。
-
 
 
  <br>
@@ -154,7 +152,6 @@ root/
 
 ### 基本
 + 半角英数字のみを使用
-+ 記号は「-」（ハイフン）を使用し、ハイフンが使えない場合は「_」（アンダースコア）を使用する
 + 全角スペース、半角スペースは使用しない
 
 #### 参考
@@ -201,12 +198,11 @@ smoothScroll.js
 ``` 
  
 ### 変数名 [JavaScript,php]
-スネークケースを使用してください。  
-文字の単語間にアンダーバーを使用し、ひと単語が長いなど 単語を読み易くするため 大文字の使用も有りとしています。  
+キャメルケースを使用してください。 
 ```
 // 例
-const snake_road = 'hoge';
-const snakeBlack_road = 'hoge';
+const snakeRoad = 'hoge';
+const snakeBlackRoad = 'hoge';
 ```
  
 ### 関数名 [JavaScript,PHP]
@@ -356,6 +352,19 @@ header.phpと名前がややこしくなるので、meta.phpという名前に�
 <!-- Google Analytics -->
 ```
 
+
+## Headerタグ
+headerタグは、ページのヘッダー以外にも、  
+ページタイトル部分や各セクションのヘッダー、シングルページの記事(article)のヘッダーにも使えそうな時は使用してください。  
+各セクションでは、main直下レベルのセクションは有りとし、かなり潜った子要素では使わない。
+
+
+## Navタグ
+https://developer.mozilla.org/ja/docs/Web/HTML/Element/nav
+
+
+## Addressタグ
+https://developer.mozilla.org/ja/docs/Web/HTML/Element/address
 
 
 
@@ -651,7 +660,6 @@ projectでは、複数のcomponentからなる大きなブロックを定義し�
 
 ## utility
 utilityでは、単一スタイルを定義します。  
-可変で値が変わるものは、componentで定義してください。  
 省略する場合は、Emmentの記述などを参考にしてください。  
 例）display、margin、padding、text-align  など
 
@@ -730,7 +738,7 @@ objectは、繰り返し使用できるスタイルで、ページ固有のス�
 jQueryは基本的に使用していません。  
 プラグインなどで仕方がない場合のみ使用してください。　　
 
-又、今までscript.jsにまとめていましたが、読み込み速度や今後の管理を考慮して 意味合い・種類別に分割することにしました。  
+又、今までscript.jsにまとめていましたが、読み込み速度や今後の管理を考慮して、意味合い・種類別に分割することにしました。  
 
 ## Directory
 ```
@@ -828,13 +836,7 @@ animationLoop();
 ランディングページなどの1ページサイトは、クラス名や画像格納のディレクトリ名に悩まされます。  
 トップページと言えばトップページですが、1ページのみで 派生がないのに 「top」 という名前を使用する事を躊躇します。  
   
-1ページもののサイトは、topではなく 「lp」 という名前に全て置き換えて制作してください。  
-その他、LayoutやComponent、Utility は通常通り管理してください。
-
-以下は、topの名前を置き換えた 例です。
-- .pg-top- → .lp-
-- /img/top/- → /img/lp/
-- page-top.css- → lp.css
+しかし、今後下層ページが追加される可能性が0では無いので、topを使用してください。
 
 
 
