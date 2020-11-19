@@ -43,6 +43,7 @@ root/
 	│	│	├ component-コンポーネント名.min.js
 	│	│	└ wp-admin.min.js 
 	│	├ font/
+	│	├ video/	
 	│	└ pdf/
 	├ wp/
 	├ ページ名/
@@ -60,6 +61,7 @@ root/
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
 - svg -- インラインで仕様するsvgを格納
 - font -- フォントをディレクトリ単位で格納
+- video -- videoを格納し、ページ単体のものはディレクトリ名で分ける。そうでなければ全て直下に配置する。
 - pdf -- PDFを格納
 
 
