@@ -1,4 +1,4 @@
- # Outline
+ # Guideline v2.5.0
 本ガイドラインは、迷っている時間を少なくし、品質とスピードを一定に保つためのものです。   
 
 ## Definition
@@ -72,7 +72,7 @@ root/
 - wp-editor.min.css --  WordPressの編集者の管理画面用cssファイル
 - wp-login.min.css --  WordPressのログイン画面用cssファイル
 
-※themeが少ない場合は、commonと合わせても問題ない  
+※pageが少ない場合は、commonと合わせても問題ない  
 ※style.cssは、どこのスタイルか解らず抽象的なため廃止し、common（共通）にしています。
 
 
@@ -102,22 +102,36 @@ root/
 上記の範囲はあくまで参考程度で、768pxや1000pxなど 状況に応じて変更してください。
 
 ```
-'ss': 'screen and (min-width: 321px)',
-'xs': 'screen and (min-width: 415px)',
-'sm': 'screen and (min-width: 561px)',
-'md': 'screen and (min-width: 769px)',
-'lg': 'screen and (min-width: 1024px)',
-'xl': 'screen and (min-width: 1280px)',
-'fhd': 'screen and (min-width: 1921px)',
+$breakpoint-up-width: (
+	'xxxs': '(min-width: 321px)',
+	'xxs' : '(min-width: 376px)',
+	'xs'  : '(min-width: 415px)',
+	'sm'  : '(min-width: 561px)',
+	'md'  : '(min-width: 769px)',
+	'lg'  : '(min-width: 1024px)',
+	'xl'  : '(min-width: 1281px)',
+	'xxl' : '(min-width: 1361px)',
+	'xxxl': '(min-width: 1681px)',
+	'fhd' : '(min-width: 1921px)',
+	'2K'  : '(min-width: 2048px)',
+	'wqhd': '(min-width: 2561px)',
+) !default;
 ```
 ```
-'ss': 'screen and (max-width: 320px)',
-'xs': 'screen and (max-width: 414px)',
-'sm': 'screen and (max-width: 560px)',
-'md': 'screen and (max-width: 768px)',
-'lg': 'screen and (max-width: 1023px)',
-'xl': 'screen and (max-width: 1279px)',
-'fhd': 'screen and (max-width: 1920px)',
+$breakpoint-down-width: (
+	'xxxs': '(max-width: 320px)',
+	'xxs' : '(max-width: 375px)',
+	'xs'  : '(max-width: 414px)',
+	'sm'  : '(max-width: 560px)',
+	'md'  : '(max-width: 768px)',
+	'lg'  : '(max-width: 1023px)',
+	'xl'  : '(max-width: 1280px)',
+	'xxl' : '(max-width: 1360px)',
+	'xxxl': '(max-width: 1680px)',
+	'fhd' : '(max-width: 1920px)',
+	'2K'  : '(max-width: 2048px)',
+	'wqhd': '(max-width: 2560px)',
+) !default;
 ```
 
  
@@ -200,11 +214,11 @@ smoothScroll.js
 ``` 
  
 ### 変数名 [JavaScript,php]
-キャメルケースを使用してください。 
+キャメルケースまたはスネークケースを使用してください。 
 ```
 // 例
-const snakeRoad = 'hoge';
-const snakeBlackRoad = 'hoge';
+const snakeRoad  = 'hoge';
+const snake_road = 'hoge';
 ```
  
 ### 関数名 [JavaScript,PHP]
@@ -260,29 +274,40 @@ section.t-top-visual
 ### index.php
 ファイルの最上部で、titleやdescriptionを変数に代入してください。　　
 - $directory -- パンクズリストやjson-ldなどで使用する変数です。配列で ('ページ名','ディレクトリ') を指定してください。<br>ディレクトリは $home_url 以下を指定してください。
+- $meta -- title,description,keywordsを連想配列で指定してください。
 - $preload -- rel="preload" as="image" で先読みした画像を配列で指定してください。
 - $style -- common.min.cssなどの共通ファイル以外に、ページ固有のcssなど読み込ませたい場合、配列でcssのhrefを指定してください。
 - $script -- common.min.jsなどの共通ファイル以外に、ページ固有のcssなど読み込ませたい場合、配列でscriptのsrcを指定してください。
+- $robots -- robotsの値を指定してください。※tpl-phpのバージョンによって記述が異なります。
 
 
 ```
 <?php require_once( dirname( __FILE__ ) . '/include/variable.php' ); ?>
 <?php require_once( dirname( __FILE__ ) . '/include/functions.php' ); ?>
 <?php
-	$title       = $top_title;
-	$description = $top_description;
-	$keywords    = $top_keywords;
 	$directory   = array(
 		array('ホーム','')
 	);
+	$robots = 'all';
+
+	$meta = array(
+		'title'       => $site_name,
+		'description' => '',
+		'keywords'    => '',
+	);
+
 	$preload = array(
-		$home_url . 'assets/img/top/visual_01.jpg',
+		array(
+			'href' => $home_url . 'assets/img/top/visual_01.jpg',
+			'as'   => 'image',
+		),
 	);
-	$style = array(
-	);
+	$style = array();
 	$script = array(
 		$home_url . 'assets/js/page-top.min.js',
 	);
+
+	$pageJsonld = '';
  ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -299,7 +324,6 @@ section.t-top-visual
 	</main>
 <?php require_once($web_root.$home_url.'include/aside.php'); ?>
 <?php require_once($web_root.$home_url.'include/footer.php'); ?>
-<?php require_once($web_root.$home_url.'include/js.php'); ?>
 </body>
 </html>
 ```
@@ -310,48 +334,81 @@ headタグは、include/meta.php で共通管理しています。
 header.phpと名前がややこしくなるので、meta.phpという名前にしています。
 
 ```
-<meta charset="UTF-8">
-<title><?= $title; ?></title>
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<meta name="format-detection" content="telephone=no">
-<meta name="robots" content="all">
-<meta name="description" content="<?= $description; ?>">
-<meta name="keywords" content="<?= $keywords; ?>">
-<meta name="copyright" content="© <?= $author; ?>">
-<meta name="author" content="<?= $author; ?>">
-<meta name="theme-color" content="<?= $theme_color; ?>">
-<meta name="msapplication-TileColor" content="<?= $theme_color; ?>">
-<meta name="application-name" content="<?= $site_name; ?>">
-<meta name="apple-mobile-web-app-title" content="<?= $site_name; ?>">
-<meta name="thumbnail" content="<?= $ogp_url; ?>">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<?= $title;?>">
-<meta name="twitter:description" content="<?= $description; ?>">
-<meta name="twitter:image:src" content="<?= $ogp_url; ?>">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="<?= $site_name; ?>">
-<meta property="og:title" content="<?= $title;?>">
-<meta property="og:description" content="<?= $description; ?>">
-<meta property="og:url" content="<?= $url; ?>">
-<meta property="og:image" content="<?= $ogp_url; ?>">
-<meta property="og:locale" content="ja_JP">
-<link rel="dns-prefetch" href="//webfont.fontplus.jp">
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//www.google-analytics.com">
-<link rel="preload" as="style" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>">
-<link rel="preload" as="script" href="<?= $home_url; ?>assets/js/library.js<?= $cashDate; ?>">
-<link rel="preload" as="script" href="<?= $home_url; ?>assets/js/module.min.js<?= $cashDate; ?>">
-<link rel="index" href="<?= $top_url; ?>">
-<link rel="canonical" href="<?= $url; ?>">
-<link rel="contents" href="<?= $top_url; ?>sitemap.xml" title="サイトマップ">
-<link rel="icon" type="image/png" href="<?= $home_url; ?>assets/img/meta/icon-512x512.png">
-<link rel="apple-touch-icon" href="<?= $home_url; ?>assets/img/meta/apple-touch-icon.png">
-<!-- googlefont -->
-<link rel="stylesheet" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>">
-<!-- fontplus -->
-<script type="application/ld+json"></script>
-<!-- Google Analytics -->
+<?php
+	$title       = removeUseless( $meta['title'] );
+	$description = removeUseless( $meta['description'] );
+	$keywords    = removeUseless( $meta['keywords'] );
+ ?>
+	<meta charset="UTF-8">
+	<title><?= $title; ?></title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="robots" content="<?= $robots; ?>">
+<?php if( $description ): ?>
+	<meta name="description" content="<?= $description; ?>">
+<?php endif; ?>
+<?php if( $keywords ): ?>
+	<meta name="keywords" content="<?= $keywords; ?>">
+<?php endif; ?>
+	<meta name="copyright" content="© <?= $author; ?>">
+	<meta name="author" content="<?= $author; ?>">
+	<meta name="theme-color" content="<?= $theme_color; ?>">
+	<meta name="msapplication-TileColor" content="<?= $theme_color; ?>">
+	<meta name="application-name" content="<?= $site_name; ?>">
+	<meta name="apple-mobile-web-app-title" content="<?= $site_name; ?>">
+	<meta name="thumbnail" content="<?= $ogp_url; ?>">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="<?= $title;?>">
+<?php if( $description ): ?>
+	<meta name="twitter:description" content="<?= $description; ?>">
+<?php endif; ?>
+	<meta name="twitter:image:src" content="<?= $ogp_url; ?>">
+<?php if( $web_url == $home_url ): ?>
+	<meta property="og:type" content="website">
+<?php else: ?>
+	<meta property="og:type" content="article">
+<?php endif; ?>
+	<meta property="og:site_name" content="<?= $site_name; ?>">
+	<meta property="og:title" content="<?= $title;?>">
+<?php if( $description ): ?>
+	<meta property="og:description" content="<?= $description; ?>">
+<?php endif; ?>
+	<meta property="og:url" content="<?= $url; ?>">
+	<meta property="og:image" content="<?= $ogp_url; ?>">
+	<meta property="og:locale" content="ja_JP">
+	<link rel="dns-prefetch" href="//typesquare.com">
+	<link rel="dns-prefetch" href="//webfont.fontplus.jp">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<link rel="preload" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>" as="style">
+	<link rel="preload" href="<?= $home_url; ?>assets/js/library.js<?= $cashDate; ?>" as="script">
+	<link rel="preload" href="<?= $home_url; ?>assets/js/module.min.js<?= $cashDate; ?>" as="script">
+	<link rel="preload" href="<?= $home_url; ?>assets/img/common/loading.svg" as="image">
+<?php outputPreload( $preload ); ?>
+	<link rel="index" href="<?= $top_url; ?>">
+<?php if( !is_404() ): ?>
+	<link rel="canonical" href="<?= $url; ?>">
+<?php endif; ?>
+	<link rel="contents" href="<?= $top_url; ?>sitemap.xml" title="サイトマップ">
+	<link rel="icon" type="image/svg+xml" href="<?= $home_url; ?>assets/img/meta/favicon.svg">
+	<link rel="icon" type="image/png" href="<?= $home_url; ?>assets/img/meta/icon-512x512.png">
+	<link rel="apple-touch-icon" href="<?= $home_url; ?>assets/img/meta/apple-touch-icon.png">
+	<!-- googlefont -->
+	<link rel="stylesheet" href="<?= $home_url; ?>assets/css/common.min.css<?= $cashDate; ?>">
+<?php outputStyle( $style ); ?>
+	<!-- fontplus -->
+	<!-- typesquare -->
+	<script src="<?= $home_url; ?>assets/js/jquery.min.js"></script>
+	<script src="<?= $home_url; ?>assets/js/library.js<?= $cashDate; ?>" defer></script>
+	<script src="<?= $home_url; ?>assets/js/module.min.js<?= $cashDate; ?>" defer></script>
+	<script src="<?= $home_url; ?>assets/js/common.min.js<?= $cashDate; ?>" defer></script>
+<?php outputScript( $script ); ?>
+<?php outputJsonld( $directory , $title , $description , $pageJsonld ); ?>
+	<!-- Google Analytics -->
+<?php if( $test_mode == true ): ?>
+	<meta name="robots" content="noindex,nofollow">
+<?php endif; ?>
 ```
 
 
@@ -1004,6 +1061,7 @@ phpはコンパイルしないので、public_htmlにそのままファイルを
 - sassのコンパイル、結合、圧縮
 - JavaScriptの結合、圧縮
 - 画像、svgの圧縮
+- webp生成
 - 上記以外のファイルの移動
 
 
