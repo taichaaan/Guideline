@@ -60,6 +60,7 @@ root/
 
 ※上記以外は、パーツごとにファイルを作成。
 
+<br>
 
 ## Assets
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
@@ -70,6 +71,7 @@ root/
 - video -- videoを格納。ページ単体のものはディレクトリ名で分ける。そうでなければ全て直下に配置する。
 - pdf -- PDFを格納
 
+<br>
 
 ## Img
 - common -- 共通ファイルを格納。「object」「icon」などある一定数以上のパーツがある場合は、ディレクトリを作っても良いものとする。  
@@ -77,6 +79,7 @@ root/
 
 ※common,meta以外は、ページ名でディレクトリを作る。　　
 
+<br>
 
 ## CSS
 - common.css -- ページ共通のcssファイル
@@ -89,6 +92,7 @@ root/
 ※pageが少ない場合は、commonと合わせても問題ない。　　
 ※style.cssは、どこのスタイルか解らず抽象的なため廃止し、common（共通）にしています。
 
+<br>
 
 ## JavaScript
 - library.js -- 外部ライブラリを集めたJavaScriptファイル（圧縮なし）
@@ -102,6 +106,7 @@ root/
 ※pageが少ない場合は、commonと合わせても問題ない  
 ※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
+<br>
 
 ## index.php
 ファイルの最上部で、titleやdescriptionを変数に代入してください。　　
