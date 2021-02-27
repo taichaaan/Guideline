@@ -102,3 +102,65 @@ root/
 ※pageが少ない場合は、commonと合わせても問題ない  
 ※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
+
+## index.php
+ファイルの最上部で、titleやdescriptionを変数に代入してください。　　
+※2021年1月頃に、変数の形式が配列に変化したものもありますが、大体同じになっています。　　
+- $directory -- パンクズリストやjson-ldなどで使用する変数です。配列で ('ページ名','ディレクトリ') を指定してください。<br>ディレクトリは $home_url 以下を指定してください。
+- $robots -- robotsの値を指定してください。※tpl-phpのバージョンによって記述が異なります。
+- $meta -- title,description,keywordsを連想配列で指定してください。
+- $preload -- rel="preload" as="image" で先読みしたいコンテンツを配列で指定してください。
+- $style -- 共通CSSファイル以外に、ページ固有で読み込ませたい場合、配列でCSSのhrefを指定してください。
+- $script -- 共通JavaScriptファイル以外に、ページ固有で読み込ませたい場合、配列でJavaScriptのsrcを指定してください。
+- $pageJsonld -- ぺーじ固有の"application/ld+json"がある場合、文字列で指定してください。無い場合は空です。
+
+
+```
+<?php require_once( dirname( __FILE__ ) . '/include/variable.php' ); ?>
+<?php require_once( dirname( __FILE__ ) . '/include/functions.php' ); ?>
+<?php
+	$directory   = array(
+		array('ホーム','')
+	);
+	$robots = 'all';
+
+	$meta = array(
+		'title'       => $site_name,
+		'description' => '',
+		'keywords'    => '',
+	);
+
+	$preload = array(
+		array(
+			'href' => $home_url . 'assets/img/top/visual_01.jpg',
+			'as'   => 'image',
+		),
+	);
+	$style = array();
+	$script = array(
+		$home_url . 'assets/js/page-top.min.js',
+	);
+
+	$pageJsonld = '';
+ ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<?php require_once($web_root.$home_url.'include/meta.php'); ?>
+</head>
+<body data-root="<?= $home_url; ?>">
+<?php require_once($web_root.$home_url.'include/preload-svg.php'); ?>
+<?php require_once($web_root.$home_url.'include/loading.php'); ?>
+<?php require_once($web_root.$home_url.'include/header.php'); ?>
+	<main>
+		<!-- comment -->
+		<!-- /comment -->
+	</main>
+<?php require_once($web_root.$home_url.'include/aside.php'); ?>
+<?php require_once($web_root.$home_url.'include/footer.php'); ?>
+</body>
+</html>
+```
+
+
+
