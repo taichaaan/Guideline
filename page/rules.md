@@ -108,7 +108,7 @@ const getWindowHeight = function (){
 
 https://murashun.jp/blog/20181109-01.html
 
-## WordPress
+## [WordPress](./wordpress.md)
 WordPressの投稿タイプ名にハイフンを使用すると問題を引き起こす可能性があるので、アンダースコアを使用してください。  
 ただ、ディレクトリ名はGoogleがハイフンを推奨しているため、rewriteでスラッグをハイフンに変更してください。  
   
