@@ -54,8 +54,8 @@ root/
 
 ## Include
 各ページで読み込ませる共通パーツを格納するディレクトリです。
-- variable.php -- 変数を記述するファイル。wp-loadもここでこなっています。
-- functions.php -- 関数を記述するファイル
+- variable.php -- 共通変数を記述するファイル。wp-loadもここでこなっています。
+- functions.php -- 共通関数を記述するファイル
 - meta.php -- headタグ内のファイル。headはheader.phpと名前が似ているため、meta.phpにしています。
 
 ※上記以外は、パーツごとにファイルを作成。
@@ -109,8 +109,10 @@ root/
 <br>
 
 ## index.php
-ファイルの最上部で、titleやdescriptionを変数に代入してください。　　
-※2021年1月頃に、変数の形式が配列に変化したものもありますが、大体同じになっています。　　
+ファイルの最上部で、titleやdescriptionを変数に代入してください。  
+JavaScriptで$homt_urlを使用する可能性があるため、bodyに「`data-root="<?= $home_url; ?>"`」を入れています。  
+※2021年1月頃に、変数の形式が配列に変化したものもありますが、大体同じになっています。　
+
 - $directory -- パンクズリストやjson-ldなどで使用する変数です。配列で ('ページ名','ディレクトリ') を指定してください。<br>ディレクトリは $home_url 以下を指定してください。
 - $robots -- robotsの値を指定してください。※tpl-phpのバージョンによって記述が異なります。
 - $meta -- title,description,keywordsを連想配列で指定してください。
