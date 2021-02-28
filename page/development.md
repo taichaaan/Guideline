@@ -80,22 +80,22 @@ v4.0.2
 /* Project path.
 ------------------ */
 const devRoot   = '../dev_html/'; // Path to dev webroot.
-const devAssets = devRoot + 'assets' + '/'; // Path to dev assets.
-const devImg    = devAssets + 'img' + '/'; // Path to project original img.
-const devSvg    = devAssets + 'svg' + '/'; // Path to project original svg.
-const devSass   = devAssets + 'sass' + '/'; // Path to project sass.
-const devScript = devAssets + 'js' + '/'; // Path to project original js.
-const devHtml   = devRoot; // Path to project original html.
-const devWp     = devRoot + 'wp' + '/'; // Path to project original wordpress.
+const devAssets = devRoot + 'assets' + '/';
+const devImg    = devAssets + 'img' + '/';
+const devSvg    = devAssets + 'svg' + '/';
+const devSass   = devAssets + 'sass' + '/';
+const devScript = devAssets + 'js' + '/';
+const devHtml   = devRoot;
+const devWp     = devRoot + 'wp' + '/';
 
 const projectRoot   = '../../public_html/'; // Path to project webroot.
-const projectAssets = projectRoot + 'assets' + '/'; // Path to project assets.
-const projectImg    = projectAssets + 'img' + '/'; // Path to project img.
-const projectSvg    = projectAssets + 'svg' + '/'; // Path to project svg.
-const projectCss    = projectAssets + 'css' + '/'; // Path to project css.
-const projectScript     = projectAssets + 'js' + '/'; // Path to project javascript.
-const projectHtml   = projectRoot; // Path to project HTML.
-const projectWp     = projectRoot + 'wp' + '/'; // Path to project wordpress.
+const projectAssets = projectRoot + 'assets' + '/';
+const projectImg    = projectAssets + 'img' + '/';
+const projectSvg    = projectAssets + 'svg' + '/';
+const projectCss    = projectAssets + 'css' + '/';
+const projectScript     = projectAssets + 'js' + '/';
+const projectHtml   = projectRoot;
+const projectWp     = projectRoot + 'wp' + '/';
 
 
 /* gulp
@@ -105,37 +105,37 @@ const gulp = require('gulp');
 
 // common
 const sourcemaps = require('gulp-sourcemaps');
-const plumber    = require('gulp-plumber'); // Do not stop watch even if an error occurs.
-const notify     = require('gulp-notify'); // Display notification on desktop.
-const rename     = require('gulp-rename'); // File rename.
-const concat     = require('gulp-concat'); // Combine multiple file.
+const plumber    = require('gulp-plumber');
+const notify     = require('gulp-notify');
+const rename     = require('gulp-rename');
+const concat     = require('gulp-concat');
 const del        = require('del');
-const header     = require('gulp-header'); // header comment
+const header     = require('gulp-header');
 
 
 // Sass plugin.
-const sass         = require('gulp-sass'); // Sass compile.
-const autoprefixer = require('gulp-autoprefixer'); // Autoprefixer.
-const bulkSass     = require('gulp-sass-bulk-import'); // Import at a stretch.
+const sass         = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const bulkSass     = require('gulp-sass-bulk-import');
 const gcmq         = require('gulp-group-css-media-queries');
 const cleanCSS     = require("gulp-clean-css");
 
 // Minify Images plugin.
-const changed     = require('gulp-changed'); // Check file to be updated.
-const imagemin    = require('gulp-imagemin'); // Compress image.
-const imageminJpg = require('imagemin-jpeg-recompress'); // Compress jpg image.
-const imageminPng = require('imagemin-pngquant'); // Compress png image.
-const imageminGif = require('imagemin-gifsicle'); // Compress gif image.
-const svgmin      = require('gulp-svgmin'); // Compress svg image.
-const webp        = require('gulp-webp'); // webp
+const changed     = require('gulp-changed');
+const imagemin    = require('gulp-imagemin');
+const imageminJpg = require('imagemin-jpeg-recompress');
+const imageminPng = require('imagemin-pngquant');
+const imageminGif = require('imagemin-gifsicle');
+const svgmin      = require('gulp-svgmin');
+const webp        = require('gulp-webp');
 
 // Pug min
-const pug         = require('gulp-pug'); // pug
-const htmlComp    = require('gulp-phtml-simple-comp'); // phtml-simple-comp
+const pug         = require('gulp-pug');
+const htmlComp    = require('gulp-phtml-simple-comp');
 const PugBeautify = require('gulp-pug-beautify');
 
 // Minify javaScript plugin.
-const uglify = require('gulp-uglify-es').default; // Compress javascript file.
+const uglify = require('gulp-uglify-es').default;
 
 
 
