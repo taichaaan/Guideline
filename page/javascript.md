@@ -51,6 +51,26 @@ module.min.jsでは、RENDAN独自プラグインを圧縮して出力してい�
 
 <br>
 
+## 未対応ブラウザへの配慮
+
+- [webp](https://caniuse.com/?search=webp)と[picture](https://caniuse.com/?search=picture)タグ、[object-fit](https://caniuse.com/?search=object-fit)
+- [object-fit](https://caniuse.com/?search=object-fit)とlazyload
+
+上記のような未対応ブラウザがあるプロパティやタグを掛け合わせる時が多々あり、JavaScriptで対応します。  
+有名どころで、[ofi.js](https://github.com/fregante/object-fit-images)や[picturefill.js](http://scottjehl.github.io/picturefill/)などがありますが、  
+先程のような掛け合わせの場合、JS同士がバッティングしてしまい、崩れてします。  
+  
+なので、RENDANオリジナルプラグインを作りました。  
+それぞれ、object-fitやpictureタグ、未対応ブラウザか否かを考慮した作りになっています。  
+
+- [object-fit](https://github.com/taichaaan/js-objectFit)
+- [picture](https://github.com/taichaaan/js-picture)
+- [lazyload](https://github.com/taichaaan/js-lazyload)
+
+
+
+<br>
+
 ## AnimationFrame
 ```
 ///////////////////////////////////////////////////////////////
