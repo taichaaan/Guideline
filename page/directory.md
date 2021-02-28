@@ -120,7 +120,7 @@ root/
 - $pageJsonld -- ぺーじ固有の"application/ld+json"がある場合、文字列で指定してください。無い場合は空です。
 
 
-```
+```php
 <?php require_once( dirname( __FILE__ ) . '/include/variable.php' ); ?>
 <?php require_once( dirname( __FILE__ ) . '/include/functions.php' ); ?>
 <?php
