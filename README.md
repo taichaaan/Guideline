@@ -28,7 +28,7 @@
 - [Pug](./page/pug.md)
 - [CSS](./page/css.md)
 - [Sass](./page/sass.md)
-- [Javascript](./page/javascript.md)
+- [JavaScript](./page/javascript.md)
 - [WordPress](./page/wordpress.md)
 - [SNS](./page/sns.md)
 
