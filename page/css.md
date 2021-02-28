@@ -51,5 +51,7 @@ flocssとほぼ同じなので、詳しくは<a href="#flocss">flocss</a>を参�
 :nth-last-of-type(n+X)  /* 最後からX番目以前 */
 ```
 
-1万人に聞いた、2019年の最新CSS使用状況  
-https://qiita.com/rana_kualu/items/6d967b4d4cd4fc59d7e2
+- [何番目系の便利なCSSまとめ](https://qiita.com/ituki_b/items/62a752389385de7ba4a2)
+- [1万人に聞いた、2019年の最新CSS使用状況](https://qiita.com/rana_kualu/items/6d967b4d4cd4fc59d7e2)
+  
+
