@@ -4,6 +4,20 @@
 ```
 └ root/
 	└ wp/
+		└ wp-content/
+			└ themes/
+				└ theme-name/
+					├ template/
+					│	├ page/
+					│	└ parts/
+					├ archive.php
+					├ front-page.php
+					├ functions.php
+					├ home.php
+					├ index.php
+					├ single.php
+					├ style.php
+					└ taxonomy-hoge.php
 ```
 
 ### サブディレクトリ 
@@ -11,6 +25,12 @@ WordPressは、サブディレクトリ上階層で表示する形を採用し�
 
 ### 方法
 https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
+
+
+### templateディレクトリ 
+共通パーツはtemplateディレクトリに格納します。  
+ただ、共通パーツがひとつしかない場合は、直下においても良いものとします。  
+その場合、ファイル名の最初に「page-」や「parts-」といった本来置くディレクトリ名を入れてください。
 
 
 <br>
@@ -38,6 +58,20 @@ https://zenlogic.jp/support/knowledge/wordpress/install_directory.html
 <br>
 
 ## 投稿の表示
+
+
+### front-pageの使用
+
+`front-page.php`がトップページとして表示されるように設定します。 
+
+- 固定ページを一つ作り、タイトルは「プレスリリース」など適切なもの入れる。
+- 表示設定から以下のようにする
+
+![image1](https://github.com/taichaaan/Guideline/blob/master/assets/img/wordpress/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-12-19%2011.14.57.png)
+
+
+
+
 
 ### 基本
 ```php
