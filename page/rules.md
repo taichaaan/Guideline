@@ -79,4 +79,15 @@ const getWindowHeight = function (){
 
 https://murashun.jp/blog/20181109-01.html
 
+## WordPress
+WordPressの投稿タイプ名にハイフンを使用すると問題を引き起こす可能性があるので、アンダースコアを使用してください。  
+ただ、ディレクトリ名はGoogleがハイフンを推奨しているため、rewriteでスラッグをハイフンに変更してください。  
+  
+タクソノミー、
+ただ、ディレクトリ名はGoogleがハイフンを推奨しているため、rewriteでスラッグをハイフンに変更してください。  
+
+
+
+<br>
+
 # コメントアウト
