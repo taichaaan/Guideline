@@ -2,7 +2,7 @@
 
 ## Comment
 コメントアウトは、sectionなど大区分か ループする記述の可視性を上げる為、始めと終わりに記述してください。
-```
+```html
 <!-- t-top-visual -->
 <section class="t-top-visual">
 </section>
@@ -21,7 +21,7 @@
 headタグは、include/meta.php で共通管理しています。  
 header.phpと名前がややこしくなるので、meta.phpという名前にしています。
 
-```
+```php
 <?php
 	$title       = removeUseless( $meta['title'] );
 	$description = removeUseless( $meta['description'] );
@@ -119,7 +119,7 @@ https://developer.mozilla.org/ja/docs/Web/HTML/Element/address
 
 ## aタグ
 https://edge.sincar.jp/web/target_blank-security/
-```
+```html
 <a href="" target="_blank" rel="noopener"></a>
 ```
 
@@ -129,7 +129,7 @@ https://edge.sincar.jp/web/target_blank-security/
 https://rendan.jp/note/2020-10-24-17/
 
 ### 例） PCとスマホで振り分け
-```
+```php
 <picture>
 	<source type="image/webp" srcset="<?= $home_url; ?>assets/img/top/visual_1-pc.webp" media="(min-width:769px)">
 	<source type="image/webp" srcset="<?= $home_url; ?>assets/img/top/visual_1-sp.webp" media="(max-width:768px)">
