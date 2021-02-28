@@ -30,4 +30,9 @@
 - [Javascript](./page/javascript.md)
 - [WordPress](./page/wordpress.md)
 - [SNS](./page/sns.md)
+
+
+<br>
+
+## About
 - [Guidelineについて](./page/guideline.md)
