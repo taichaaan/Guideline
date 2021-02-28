@@ -77,24 +77,24 @@ root/
 - common -- 共通ファイルを格納。「object」「icon」などある一定数以上のパーツがある場合は、ディレクトリを作っても良いものとする。  
 - meta -- （meta.phpと連動して）meta.phpファイル内で使用する画像は、metaディレクトリに格納。
 
-※common,meta以外は、ページ名でディレクトリを作る。　　
+※common,meta以外は、ページ名でディレクトリを作る。  
 
 <br>
 
-## CSS
+## [CSS](./css.md)
 - common.css -- ページ共通のcssファイル
 - page-ページ名.css --  ページ固有のcssファイル
 - wp-admin.css --  WordPressの全ユーザの管理画面用cssファイル
 - wp-editor.css --  WordPressの編集者の管理画面用cssファイル
 - wp-login.css --  WordPressのログイン画面用cssファイル
 
-※ファイルに圧縮をかけている場合は、「.min」の形にする。　　
-※pageが少ない場合は、commonと合わせても問題ない。　　
+※ファイルに圧縮をかけている場合は、「.min」の形にする。  
+※pageが少ない場合は、commonと合わせても問題ない。  
 ※style.cssは、どこのスタイルか解らず抽象的なため廃止し、common（共通）にしています。
 
 <br>
 
-## JavaScript
+## [JavaScript](./javascript.md)
 - library.js -- 外部ライブラリを集めたJavaScriptファイル（圧縮なし）
 - module.js -- RENDANプラグインを集めたJavaScriptファイル
 - common.js -- ページ共通のJavaScriptファイル
@@ -102,7 +102,7 @@ root/
 - component-コンポーネント名.js -- フォームなど部品のJavaScriptファイル
 - wp-admin.js  -- WordPressの全ユーザの管理画面用JavaScriptファイル
 
-※ファイルに圧縮をかけている場合は、「.min」の形にする。　
+※ファイルに圧縮をかけている場合は、「.min」の形にする。  
 ※pageが少ない場合は、commonと合わせても問題ない  
 ※script.jsは、どこのscriptか解らず抽象的なため廃止し、common（共通）にしています。
 
@@ -111,7 +111,7 @@ root/
 ## index.php
 ファイルの最上部で、titleやdescriptionを変数に代入してください。  
 JavaScriptで$homt_urlを使用する可能性があるため、bodyに「`data-root="<?= $home_url; ?>"`」を入れています。  
-※2021年1月頃に、変数の形式が配列に変化したものもありますが、大体同じになっています。　
+※2021年1月頃に、変数の形式が配列に変化したものもありますが、大体同じになっています。  
 
 - $directory -- パンクズリストやjson-ldなどで使用する変数です。配列で ('ページ名','ディレクトリ') を指定してください。<br>ディレクトリは $home_url 以下を指定してください。
 - $robots -- robotsの値を指定してください。※tpl-phpのバージョンによって記述が異なります。
