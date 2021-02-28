@@ -9,7 +9,9 @@
 				└ theme-name/
 					├ template/
 					│	├ page/
+					│	│	└ archive-blog.php
 					│	└ parts/
+					│		└ sidebar.php
 					├ archive.php
 					├ front-page.php
 					├ functions.php
