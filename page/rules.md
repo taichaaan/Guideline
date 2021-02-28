@@ -1,3 +1,82 @@
 # 命名規則
+## 基本
+- 半角英数字のみを使用
+- 全角スペース、半角スペースは使用しない
+
+### 参考
+https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470
+
+## 略語
+検索で、「英単語 略」で検索して存在する場合は使用して良いものとする。  
+自分しか分からないような略後は使用しない。  
+
+```
+// 例
+Attention → attn
+Reservation → rsv
+```
+ 
+## 画像名
+画像のファイル名は、単語間は「_」（アンダースコア）、状態を表す時は「-」（ハイフン）を使用してください。    
+例えば、色が違う場合などがこれに当たります。
+また、ページや種類ごとでディレクトリ名を変えているので、画像の先頭に top などの ページ名は不要としています。
+```
+// 例
+logo_horizontal-black.svg
+logo_horizontal-white.svg
+logo_vertical-black.svg
+
+[大内容]_[小内容]_..._[連番]-[状態].[拡張子]
+```
+
+## ディレクトリ名
+単語間はハイフンを使用してください。  
+```
+// 例
+/about/
+/portfolio-item/
+```
+
+## jsファイル名
+キャメルケースを使用してください。  
+```
+// 例
+objectFit.js
+isCurrent.js
+smoothScroll.js
+``` 
+ 
+## 変数名 [JavaScript,php]
+キャメルケースまたはスネークケースを使用してください。 
+```
+// 例
+const snakeRoad  = 'hoge';
+const snake_road = 'hoge';
+```
+ 
+## 関数名 [JavaScript,PHP]
+キャメルケースを使用してください。  
+最初の単語以外の文字の先頭を大文字を使用してください。  
+```
+// 例
+const getWindowHeight = function (){
+    // function ...
+}
+```
+
+また、関数の最初は、なにをしている関数なのかを明確にするため、以下のような文字を使用してください。
+| name | description |
+----|---- 
+| init | 初期化 |
+| base | 基礎 |
+| basis | 基礎 |
+| basic | 基礎 |
+| set | 値を代入する場合に用いる |
+| get | データの取得 |
+| add | 追加 |
+| remove | 削除 |
+| is | 期待する状態になっているか |
+
+https://murashun.jp/blog/20181109-01.html
 
 # コメントアウト
