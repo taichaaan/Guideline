@@ -6,6 +6,26 @@
 
 <br>
 
+## is-hover;
+
+スマートフォンやタブレット等のタッチデバイスでは、  
+デバイスによってはhoverが原因で二度タップしないとリンク先に飛べなかったりするのでオフにしたいと思い、  
+JavaScriptでPCのみaタグなどに `is-hover` が付与されるようにしています。  
+  
+そろそろ[hoverメディアクエリ](https://developer.mozilla.org/ja/docs/Web/CSS/@media/hover)に移行しようと思っていますが、
+今は一旦JavaScript判定にしています。
+
+```
+a{
+	&.is-hover:hover{
+		opacity: .6;
+	}
+}
+```
+
+
+<br>
+
 ## $home_url;
 
 Webサイトの階層が変わっても、柔軟に対応できるように  
