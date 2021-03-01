@@ -108,6 +108,29 @@
 
 <br>
 
+## gulpの補完
+ベンダープレフィックスや`@charset "UTF-8";`はgulpが補完してくれるため不要。  
+なお、autoprefixerの基本設定は以下のようになっています。
+
+```
+.pipe( autoprefixer({
+	grid: true,
+	cascade: false,
+	remove: true,
+	overrideBrowserslist: [
+		'> 1% in JP',
+		'last 1 version',
+		'Firefox ESR'
+	]
+}) )
+```
+
+[指定方法の参考](https://qiita.com/takeshisakuma/items/0bc1c39ee976bd1f52d7)
+
+
+
+<br>
+
 ## flocss
 
 
