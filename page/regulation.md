@@ -112,6 +112,6 @@ foreach ( $dir_list as $value ) {
 }
 ```
 ```javascript
-cont home_url = document.body.dataset.root;
+const home_url = document.body.dataset.root;
 const file = home_url + 'assets/img/common/hoge.svg';
 ```
