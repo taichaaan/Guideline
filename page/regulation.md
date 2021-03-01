@@ -34,14 +34,7 @@ Webサイトの階層が変わっても、柔軟に対応できるように
 画像やリンクなどurlを使用するものでは、基本的に `$home_url` を使用してください。  
   
 JavaScriptで使用する可能性があるため、  
-bodyにはdata属性で入れています。
-```php
-<body data-root="<?= $home_url; ?>">
-```
-```javascript
-cont home_url = document.body.dataset.root;
-const file = home_url + 'assets/img/common/hoge.svg';
-```
+bodyにはdata属性で入れています。  
   
 ※CSSなどは相対パスでOK.
 
@@ -83,7 +76,9 @@ foreach ( $dir_list as $value ) {
 	$back_dir_towp .= '../';
 }
 ```
-
+```php
+<body data-root="<?= $home_url; ?>">
+```
 ```php
 <nav class="l-nav-main">
 	<ul>
@@ -111,9 +106,12 @@ foreach ( $dir_list as $value ) {
 	</div>
 </nav>
 ```
-
 ```css
 .hoge{
 	background-image: url('../img/common/hoge.svg');
 }
+```
+```javascript
+cont home_url = document.body.dataset.root;
+const file = home_url + 'assets/img/common/hoge.svg';
 ```
