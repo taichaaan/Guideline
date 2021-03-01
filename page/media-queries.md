@@ -14,6 +14,23 @@ vwにするとremの部分は相対的に変化するため、remの部分もブ
 - 1280px 〜 1024px  
 - 375px 〜
 
+```scss
+html{
+	@include mq-updown(xl,lg){
+		font-size: 10 / 1280 * 100 + vw;
+	}
+	@include mq-up(xl){
+		font-size: 62.5%;
+	}
+	@include mq-updown(lg,xxs){
+		font-size: 62.5%;
+	}
+	@include mq-down(xxs){
+		font-size: 10 / 375 * 100 + vw;
+	}
+}
+```
+
 ただ、htmlのフォントサイズにvwを使うデメリットが2つあります。  
   
 ## デメリット1
