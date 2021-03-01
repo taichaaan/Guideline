@@ -32,7 +32,17 @@ Webサイトの階層が変わっても、柔軟に対応できるように
 以下のように `variable.php` で `$home_url` を定義しています。  
 
 画像やリンクなどurlを使用するものでは、基本的に `$home_url` を使用してください。  
-
+  
+JavaScriptで使用する可能性があるため、  
+bodyにはdata属性で入れています。
+```php
+<body data-root="<?= $home_url; ?>">
+```
+```javascript
+cont home_url = document.body.dataset.root;
+const file = home_url + 'assets/img/common/hoge.svg';
+```
+  
 ※CSSなどは相対パスでOK.
 
 
