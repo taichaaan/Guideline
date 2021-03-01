@@ -113,7 +113,7 @@
 
 ## gulpの補完
 ベンダープレフィックスや`@charset "UTF-8";`はgulpが補完してくれるため不要。  
-なお、autoprefixerの基本設定は以下のようになっています。
+なお、[autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)の基本設定は以下のようになっています。
 
 ```
 .pipe( autoprefixer({
@@ -358,6 +358,6 @@ utilityでは、単一スタイルを定義します。
 objectは、繰り返し使用できるスタイルで、ページ固有のスタイルを定義する場所がないです。  
 そのため、sassディレクトリ直下にpageディレクトリを追加し、そこをページ固有のスタイルを定義するディレクトリにします。  
 CSSを分ける場合は、直下に`page-ページ名.scss`で定義します。  
-プレフィックスは、pg です。  
+プレフィックスは、`pg` です。  
 
 
