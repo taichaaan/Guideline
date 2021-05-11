@@ -33,7 +33,8 @@
 - 全角スペース、半角スペースは使用しない
 
 ### 参考
-https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470
+- https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470  
+- https://qiita.com/kei_1011/items/8f5c6393dbb652280d2d
 
 ## 略語
 検索で、「英単語 略」で検索して存在する場合は使用して良いものとする。  
