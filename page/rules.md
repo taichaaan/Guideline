@@ -115,3 +115,260 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
   
 タクソノミー、タームはハイフンを使用してください。  
 
+<br>
+
+
+## HTML
+タグ込みのサンプルです。参考程度に。
+
+### basic
+```html
+<div class="l-wrapper">
+	<header class="l-header -type1">
+		<div class="l-header__inner">
+			<h1 class="l-header__logo"></h1>
+			<nav class="l-nav">
+				<ul class="l-nav__main">
+					<li class="l-nav__main__parent">
+						<a href="">私たちについて</a>
+					</li>
+					<li class="l-nav__toggle">
+						<div class="l-nav__main__parent">
+							<a href="">会社概要</a>
+							<div class="l-nav__toggle__icon"></div>
+						</div>
+						<div class="l-nav__main__children">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<nav class="l-sitemap">
+			<div class="l-sitemap__inner">
+				<ul class="l-sitemap__main"></ul>
+				<ul class="l-sitemap__sub"></ul>
+			</div>
+		</nav>
+		<button class="l-button" aria-label="メインメニューの切替">
+			<span></span>
+			<span></span>
+		</button>
+	</header>
+	<main class="l-main">
+		<!-- p-hero -->
+		<header class="p-hero">
+			<div class="p-hero__title">
+				<h1 class="p-hero__title__ja"></h1>
+				<p class="p-hero__title__en"></p>
+			</div>
+			<ol class="c-breadcrumb">
+				<li></li>
+			</ol>
+			<div class="p-hero__bg">
+				<picture>
+					<source type="image/webp" srcset="/assets/img/hoge/hero.webp">
+					<img src="/assets/img/hoge/hero.jpg" alt="" class="c-objectfit -cover">
+				</picture>
+			</div>
+		</header>
+		<!-- /p-hero -->
+		<!-- p-hero -->
+		<header class="p-hero">
+			<div class="p-hero__contents">
+				<div class="p-hero__title">
+					<h1 class="p-hero__title__ja"></h1>
+					<p class="p-hero__title__en"></p>
+				</div>
+				<ol class="c-breadcrumb">
+					<li></li>
+				</ol>
+			</div>
+			<div class="p-hero__visual">
+				<picture>
+					<source type="image/webp" srcset="/assets/img/hoge/hero.webp">
+					<img src="/assets/img/hoge/hero.jpg" alt="" class="c-objectfit -cover">
+				</picture>
+			</div>
+		</header>
+		<!-- /p-hero -->
+		<!-- l-container -->
+		<div class="l-container">
+			<!-- p-localnav -->
+			<nav class="p-localnav">
+				<h2 class="p-localnav__title"></h2>
+				<ul class="p-localnav__list"></ul>
+			</nav>
+			<!-- /p-localnav -->
+		</div>
+		<!-- /l-container -->
+	</main>
+	<aside class="l-aside"></aside>
+	<footer class="l-footer">
+		<div class="l-footer__inner">
+			<div class="l-footer__top">
+				<div class="l-footer__profile">
+					<address class="l-footer__profile__info">
+						<p class="l-footer__profile__logo"></p>
+						<ul class="l-footer__profile__address"></ul>
+					</address>
+				</div>
+				<nav class="l-footer__nav">
+					<ul class="l-footer__nav__main">
+						<li class="l-footer__nav__main__parent">
+							<a href=""></a>
+						</li>
+						<li class="l-footer__nav__main__toggle js-toggle">
+							<p class="l-footer__nav__main__parent">
+								<a href="">会社概要</a>
+								<div class="l-footer__nav__main__toggle__icon"></div>
+							</p>
+							<div class="js-toggle__content">
+								<ul class="l-footer__nav__main__children"></ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="l-footer__nav__sub">
+						<li></li>
+					</ul>
+				</nav>
+				<div class="l-footer__sns"></div>
+				<div class="l-footer__detail"></div>
+			</div>
+			<div class="l-footer__bottom">
+				<div class="l-footer__other"></div>
+				<p class="k-footer__copyright">
+					<small>&copy;</small>
+				</p>
+				<div class="l-footer__gotop">
+					<a href="#document-top"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+```
+
+### derivation
+```html
+<!-- l-container -->
+<div class="l-container">
+	<!-- pg-hoge-intro -->
+	<section class="pg-hoge-intro">
+		<div class="pg-hoge-intro__inner c-inner">
+			<h2 class="pg-hoge-intro__slogan"></h2>
+			<h3 class="pg-hoge-intro__catch"></h3>
+			<p class="c-txt -crop"></p>
+			<div class="pg-hoge-intro__flex">
+				<div class="pg-hoge-intro__contents"></div>
+				<figure class="pg-hoge-intro__figure"></figure>
+			</div>
+		</div>
+	</section>
+	<!-- /pg-hoge-intro -->
+	<!-- pg-hoge-fuga -->
+	<section class="pg-hoge-fuga">
+		<div class="pg-hoge-fuga__inner c-inner">
+			<header class="pg-hoge-fuga__header">
+				<h2></h2>
+			</header>
+			<section class="pg-hoge-fuga__item">
+				<header>
+					<h3></h3>
+				</header>
+			</section>
+			<section class="pg-hoge-fuga__item"></section>
+			<section class="pg-hoge-fuga__item"></section>
+		</div>
+	</section>
+	<!-- /pg-hoge-fuga -->
+	<!-- pg-hoge-piyo -->
+	<section class="pg-hoge-piyo">
+		<div class="pg-hoge-piyo__inner c-inner">
+			<header class="pg-hoge-piyo__header">
+				<h2></h2>
+			</header>
+			<div class="c-column">
+				<div class="pg-hoge-piyo__cell" data-category="hoge"></div>
+			</div>
+		</div>
+	</section>
+	<!-- /pg-hoge-piyo -->
+	<!-- pg-hoge-outro -->
+	<section class="pg-hoge-outro">
+	</section>
+	<!-- /pg-hoge-outro -->
+</div>
+<!-- /l-container -->
+```
+
+### archive
+```html
+<!-- l-container -->
+<div class="l-container">
+	<mav class="p-category"></mav>
+	<section>
+		<!-- c-column -->
+		<ul class="c-column-gap-nn -col-n -row-g-nn">
+			<li class="p-card">
+				<a href="">
+					<p class="p-card__new"></p>
+					<figure class="p-card__figure"></figure>
+					<p class="p-card__category" data-category="hoge"></p>
+					<h2 class="p-card__title"></h2>
+				</a>
+			</li>
+		</ul>
+		<!-- /c-column -->
+		<!-- p-pagination -->
+		<div class="p-pagination">
+			<ul class="p-pagination__number">
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!-- /p-pagination -->
+	</section>
+</div>
+<!-- /l-container -->
+```
+
+### archive
+```html
+<!-- l-container -->
+<div class="l-container">
+	<!-- p-article -->
+	<article class="p-article">
+		<header class="p-article__header">
+			<div class="p-article__header__meta">
+				<p class="p-article__header__time">
+					<time></time>
+				</p>
+				<p class="p-article__header__category"></p>
+			</div>
+			<h1 class="p-article__header__title"></h1>
+		</header>
+		<div class="p-article__body">
+			<div class="p-article__contents">
+			</div>
+			<footer class="p-article__footer">
+				<div class="p-article__footer__info">
+					<p class="p-article__footer__title"></p>
+				</div>
+				<div class="p-article__footer__share">
+					<h2 class="p-article__footer__share__title"></h2>
+					<ul class="p-article__footer__share__list"></ul>
+				</div>
+			</footer>
+		</div>
+	</article>
+	<!-- /p-article -->
+	<!-- p-article-relate -->
+	<aside class="p-article-relate">
+	</aside>
+	<!-- /p-article-relate -->
+</div>
+<!-- /l-container -->
+```
