@@ -25,7 +25,7 @@ root/
 	│	│	│	├ apple-touch-icon.png
 	│	│	│	└ ogp.png
 	│	│	└ ページ名/
-	│	├ svg/
+	│	├ sprite/
 	│	├ css/
 	│	│	├ common.css
 	│	│	├ page-ページ名.css
@@ -64,7 +64,7 @@ root/
 
 ## Assets
 - img -- imgタグで出力する画像を格納。common,meta以外は、ページ名でディレクトリを作る。
-- svg -- インラインで仕様するsvgを格納
+- sprite -- sprite用のsvgを格納
 - css -- CSSを格納
 - js -- JavaScriptを格納
 - font -- フォントをディレクトリ単位で格納
@@ -166,7 +166,6 @@ JavaScriptで$homt_urlを使用する可能性があるため、bodyに「`data-
 <?php require_once($web_root.$home_url.'include/meta.php'); ?>
 </head>
 <body data-root="<?= $home_url; ?>">
-<?php require_once($web_root.$home_url.'include/preload-svg.php'); ?>
 <?php require_once($web_root.$home_url.'include/loading.php'); ?>
 <?php require_once($web_root.$home_url.'include/header.php'); ?>
 	<main>
