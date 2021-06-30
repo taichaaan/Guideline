@@ -309,34 +309,47 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 ```html
 <!-- l-container -->
 <div class="l-container">
-	<mav class="p-category"></mav>
-	<section>
-		<!-- c-column -->
-		<ul class="c-column-gap-nn -col-n -row-g-nn">
-			<li class="p-card">
-				<a href="">
-					<p class="p-card__new"></p>
-					<figure class="p-card__figure"></figure>
-					<p class="p-card__category" data-category="hoge"></p>
-					<h2 class="p-card__title"></h2>
-				</a>
-			</li>
-		</ul>
-		<!-- /c-column -->
-		<!-- p-pagination -->
-		<div class="p-pagination">
-			<ul class="p-pagination__number">
-				<li></li>
-				<li></li>
+	<div class="c-flex">
+		<aside class="p-sidebar">
+			<div class="p-sidebar__cell">
+				<header class="p-sidebar__title">
+					<h2 class="p-sidebar__title__ja"></h2>
+				</header>
+				<nav class="p-sidebar__nav">
+					<ul>
+						<li></li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<section>
+			<!-- c-column -->
+			<ul class="c-column-gap-nn -col-n -row-g-nn">
+				<li class="p-card">
+					<a href="">
+						<p class="p-card__new"></p>
+						<figure class="p-card__figure"></figure>
+						<p class="p-card__category" data-category="hoge"></p>
+						<h2 class="p-card__title"></h2>
+					</a>
+				</li>
 			</ul>
-		</div>
-		<!-- /p-pagination -->
-	</section>
+			<!-- /c-column -->
+			<!-- p-pagination -->
+			<div class="p-pagination">
+				<ul class="p-pagination__number">
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- /p-pagination -->
+		</section>
+	</div>
 </div>
 <!-- /l-container -->
 ```
 
-### archive
+### single
 ```html
 <!-- l-container -->
 <div class="l-container">
