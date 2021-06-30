@@ -307,82 +307,72 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 
 ### archive
 ```html
-<!-- l-container -->
-<div class="l-container">
-	<div class="c-flex">
-		<aside class="p-sidebar">
-			<div class="p-sidebar__cell">
-				<header class="p-sidebar__title">
-					<h2 class="p-sidebar__title__ja"></h2>
-				</header>
-				<nav class="p-sidebar__nav">
-					<ul>
-						<li></li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
-		<section>
-			<!-- c-column -->
-			<ul class="c-column-gap-nn -col-n -row-g-nn">
-				<li class="p-card">
-					<a href="">
-						<p class="p-card__new"></p>
-						<figure class="p-card__figure"></figure>
-						<p class="p-card__category" data-category="hoge"></p>
-						<h2 class="p-card__title"></h2>
-					</a>
-				</li>
+<aside class="p-sidebar">
+	<div class="p-sidebar__cell">
+		<header class="p-sidebar__title">
+			<h2 class="p-sidebar__title__ja"></h2>
+		</header>
+		<nav class="p-sidebar__nav">
+			<ul>
+				<li></li>
 			</ul>
-			<!-- /c-column -->
-			<!-- p-pagination -->
-			<div class="p-pagination">
-				<ul class="p-pagination__number">
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-			<!-- /p-pagination -->
-		</section>
+		</nav>
 	</div>
+</aside>
+<div class="c-inner">
+	<!-- c-column -->
+	<ul class="c-column-gap-nn -col-n -row-g-nn">
+		<li class="p-card">
+			<a href="">
+				<p class="p-card__new"></p>
+				<figure class="p-card__figure"></figure>
+				<p class="p-card__category" data-category="hoge"></p>
+				<h2 class="p-card__title"></h2>
+			</a>
+		</li>
+	</ul>
+	<!-- /c-column -->
 </div>
-<!-- /l-container -->
+<!-- p-pagination -->
+<footer class="p-pagination">
+	<ul class="p-pagination__number">
+		<li></li>
+		<li></li>
+	</ul>
+</footer>
+<!-- /p-pagination -->
 ```
 
 ### single
 ```html
-<!-- l-container -->
-<div class="l-container">
-	<!-- p-article -->
-	<article class="p-article">
-		<header class="p-article__header">
-			<div class="p-article__header__meta">
-				<p class="p-article__header__time">
-					<time></time>
-				</p>
-				<p class="p-article__header__category"></p>
-			</div>
-			<h1 class="p-article__header__title"></h1>
-		</header>
-		<div class="p-article__body">
-			<div class="p-article__contents">
-			</div>
-			<footer class="p-article__footer">
-				<div class="p-article__footer__info">
-					<p class="p-article__footer__title"></p>
-				</div>
-				<div class="p-article__footer__share">
-					<h2 class="p-article__footer__share__title"></h2>
-					<ul class="p-article__footer__share__list"></ul>
-				</div>
-			</footer>
+<!-- p-article -->
+<article class="p-article">
+	<header class="p-article__header">
+		<div class="p-article__header__meta">
+			<p class="p-article__header__time">
+				<time></time>
+			</p>
+			<p class="p-article__header__category"></p>
 		</div>
-	</article>
-	<!-- /p-article -->
-	<!-- p-article-relate -->
-	<aside class="p-article-relate">
-	</aside>
-	<!-- /p-article-relate -->
-</div>
-<!-- /l-container -->
+		<h1 class="p-article__header__title"></h1>
+	</header>
+	<div class="p-article__body">
+		<div class="p-article__contents">
+		</div>
+		<footer class="p-article__footer">
+			<div class="p-article__footer__info">
+				<p class="p-article__footer__title"></p>
+			</div>
+			<div class="p-article__footer__share">
+				<h2 class="p-article__footer__share__title"></h2>
+				<ul class="p-article__footer__share__list"></ul>
+			</div>
+		</footer>
+	</div>
+</article>
+<!-- /p-article -->
+<!-- p-article-relate -->
+<aside class="p-article-relate">
+</aside>
+<!-- /p-article-relate -->
 ```
