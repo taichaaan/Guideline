@@ -34,6 +34,7 @@ root/
 	│	│	└ wp-login.css
 	│	├ js/
 	│	│	├ library.js
+	│	│	├ jquery-library.js	
 	│	│	├ module.js
 	│	│	├ common.js
 	│	│	├ page-ページ名.js
@@ -106,6 +107,7 @@ imgタグへwidth、height属性は挿入しない
 
 ## [JavaScript](./javascript.md)
 - library.js -- 外部ライブラリを集めたJavaScriptファイル（圧縮なし）
+- jquery-library.js -- jquery本体とjqueryの外部ライブラリを集めたJavaScriptファイル（圧縮なし）
 - module.js -- RENDANプラグインを集めたJavaScriptファイル
 - common.js -- ページ共通のJavaScriptファイル
 - page-ページ名.js -- ページ固有のJavaScriptファイル
