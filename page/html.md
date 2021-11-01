@@ -101,8 +101,11 @@ header.phpと名前がややこしくなるので、meta.phpという名前に�
 <br>
 
 ## favicon
-faviconはfavicon.ico,favicon.svg,apple-touch-icon.pngの3種類のみの準備とする。  
-サイズは180×180とする
+faviconは以下の3種類とし、サイズは180×180とする。
+- favicon.ico
+- favicon.svg
+- apple-touch-icon.png
+
 
 <br>
 
