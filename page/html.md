@@ -100,6 +100,12 @@ header.phpと名前がややこしくなるので、meta.phpという名前に�
 ```
 <br>
 
+## favicon
+faviconはfavicon.ico,favicon.svg,apple-touch-icon.pngの3種類のみの準備とする。  
+サイズは180×180とする
+
+<br>
+
 ## headerタグ
 headerタグは、ページのヘッダー以外にも、  
 ページタイトル部分や各セクションのヘッダー、シングルページの記事(article)のヘッダーにも使えそうな時は使用してください。  
