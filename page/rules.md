@@ -78,11 +78,12 @@ smoothScroll.js
 ``` 
  
 ## 変数名 [JavaScript,php]
-キャメルケースまたはスネークケースを使用してください。 
+JavaScriptではキャメルケース、PHPではスネークケースを使用してください。  
+PHPがスネークケースなのは、WordPressもスネークケースだからです。
 ```
 // 例
 const snakeRoad  = 'hoge';
-const snake_road = 'hoge';
+$snake_road = 'hoge';
 ```
  
 ## 関数名 [JavaScript,PHP]
