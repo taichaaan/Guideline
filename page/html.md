@@ -140,10 +140,10 @@ https://rendan.jp/note/2020-10-24-17/
 ### 例） PCとスマホで振り分け
 ```html
 <picture>
-	<source type="image/webp" srcset="./assets/img/top/visual_1-pc.webp" media="(min-width:768px)">
-	<source type="image/webp" srcset="./assets/img/top/visual_1-sp.webp" media="(max-width:767px)">
-	<source srcset="./assets/img/top/visual_1-pc.jpg" media="(min-width:768px)">
-	<source srcset="./assets/img/top/visual_1-sp.jpg" media="(max-width:767px)">
+	<source type="image/webp" srcset="./assets/img/top/visual_1-pc.webp" media="(min-width:769px)">
+	<source type="image/webp" srcset="./assets/img/top/visual_1-sp.webp" media="(max-width:768px)">
+	<source srcset="./assets/img/top/visual_1-pc.jpg" media="(min-width:769px)">
+	<source srcset="./assets/img/top/visual_1-sp.jpg" media="(max-width:768px)">
 	<img src="./assets/img/top/visual_1-pc.jpg" alt="" class="c-objectfit -cover">
 </picture>
 ```
