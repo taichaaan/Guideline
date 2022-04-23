@@ -123,6 +123,24 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 ## HTML
 タグ込みのサンプルです。参考程度に。
 
+
+### よく悩むやつ
+point1、メインタイトル、キャッチコピーなどタイトルっぽいのが複数並ぶ場合がある。  
+その時よく悩みますが、以下のように組むように統一します。
+```pug
+header.pg-casa-concept__header
+	h2.pg-casa-concept__header__title
+		span.pg-casa-concept__header__title__sub Concept 01
+		span.pg-casa-concept__header__title__main Case Study
+h3.pg-casa-concept__catch.c-crop 「cago」の答えは、1つではありません。
+```
+```pug
+h4.c-point 
+	span.c-point__sub Point 01
+	span.c-point__main タイトルだー
+```
+
+
 ### basic
 ```html
 <div class="l-wrapper">
