@@ -120,6 +120,17 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 <br>
 
 
+## Class名
+よく悩むクラス名をまとめました
+- loopslider --- 止まらずに動き続けるスライダー
+- carousel --- slickスライダー見たいなやつ
+- slider --- fadein/outのスライダー
+
+
+
+<br>
+
+
 ## HTML
 タグ込みのサンプルです。参考程度に。
 
