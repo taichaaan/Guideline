@@ -122,6 +122,8 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 
 ## Class名
 よく悩むクラス名をまとめました
+
+### スライダー
 - loopslider --- 止まらずに動き続けるスライダー
 - carousel --- slickスライダー見たいなやつ
 - slider --- fadein/outのスライダー
