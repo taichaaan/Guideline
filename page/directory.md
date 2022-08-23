@@ -6,24 +6,27 @@ root/
 	│	├ functions.php
 	│	├ variable.php
 	│	├ meta.php
-	│	├ loading.php
-	│	├ preload-svg.php
-	│	├ header.php
-	│	├ footer.php
-	│	└ aside.php
+	│	├ layout_loading.php
+	│	├ layout_header.php
+	│	├ layout_footer.php
+	│	├ layout_aside.php
+	│	├ page_hoge.php
+	│	├ form_functions.php
+	│	└ form_variable.php
 	├ assets/
 	│	├ img/
 	│	│	├ common/
 	│	│	│	├ banner/
 	│	│	│	├ icon/
 	│	│	│	├ object/
-	│	│	│	└ title/
+	│	│	│	├ title/
+	│	│	│	└ logo/
 	│	│	├ meta/
 	│	│	│	├ favicon.ico
 	│	│	│	├ favicon.png
 	│	│	│	├ favicon.svg
 	│	│	│	├ apple-touch-icon.png
-	│	│	│	└ ogp.png
+	│	│	│	└ ogp.jpg
 	│	│	└ ページ名/
 	│	├ sprite/
 	│	├ css/
@@ -31,7 +34,7 @@ root/
 	│	│	├ page-ページ名.css
 	│	│	├ wp-admin.css
 	│	│	├ wp-editor.css
-	│	│	└ wp-login.css
+	│	│	└ wp-visual-editor.css
 	│	├ js/
 	│	│	├ library.js
 	│	│	├ jquery-library.js	
@@ -58,6 +61,9 @@ root/
 - variable.php -- 共通変数を記述するファイル。wp-loadもここでこなっています。
 - functions.php -- 共通関数を記述するファイル
 - meta.php -- headタグ内のファイル。headはheader.phpと名前が似ているため、meta.phpにしています。
+- layout_hoge.php -- layout関係は「layout_」から始める。
+- page_hoge.php -- page固有の共通パーツは「page_」から始める。
+- form_hoge.php -- formが複数個ある場合、変数と関数を共通化したいのでその場合は「form_」から始める。
 
 ※上記以外は、パーツごとにファイルを作成。
 
@@ -77,7 +83,6 @@ root/
 ## Img
 - common -- 共通ファイルを格納。「object」「icon」などある一定数以上のパーツがある場合は、ディレクトリを作っても良いものとする。  
 - meta -- （meta.phpと連動して）meta.phpファイル内で使用する画像は、metaディレクトリに格納。
-- 
 ※common,meta以外は、ページ名でディレクトリを作る。 
 
 ### width,height属性
@@ -86,8 +91,13 @@ imgタグへwidth、height属性は挿入しない
 ### 代替テキスト(alt属性）
 テキストが含まれている画像は、そのテキスト情報をそのまま記述。  
 複雑な図表はできるだけ概要を入れておく。  
-内容に意味が無い場合、もしくは前後に同じ内容のテキストがある場合は"空"でOK。  
+内容に意味が無い場合、もしくは前後に同じ内容のテキストがある場合は"空"でOK。 
 
+### decoding属性
+decoding="async" はデフォルトでつける
+
+### loading属性
+loading属性を使用する場合は、decoding属性と併用し、width,heightも記述する。
  
 
 <br>
