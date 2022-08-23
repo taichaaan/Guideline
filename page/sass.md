@@ -16,18 +16,22 @@
 	│	│	├ _reset.scss
 	│	│	└ _base.scss
 	│	├ font/
-	│	└ library/
+	│	├ library/
+	│	└ variable/
 	├ layout/
 	├ object/
 	│	├ component/
-	│	├ project/
-	│	├ utility/
+	│	│	├ form/
+	│	│	├ icon/
+	│	│	└ txt/	
 	│	├ js/
-	│	└ wp/
+	│	│	├ effect/
+	│	│	└ ui/	
+	│	├ scope/
+	│	├ project/
+	│	└ utility/
 	├ page/
-	│	└ _pagename.scss
-	├ theme/
-	│	└ _colorname.scss
+	│	└ _page-name.scss
 	├ wp-admin.scss
 	├ wp-editor.scss
 	├ wp-login.scss
@@ -43,13 +47,14 @@
 	- font -- アニメーションを定義します
 	- base -- フォントの読み込みがある場合、定義します。
 	- library -- jsの外部プラグインでcssがある場合は、拡張子をscssに変えて定義します。
+	- vaiable -- CSS変数をファイル別で定義します。
 - layout -- ページを構成するスタイルを定義します。
 - object -- 繰り返し使用できるスタイルを定義します
-	- component -- 再利用できるパターンとして、小さな単位のモジュールを定義します。
+	- component -- 再利用できるパターンとして、小さな単位のモジュールを定義します
+	- scope -- classセレクタと要素セレクタの子孫セレクタでスタイルを格納するディレクトリ。ブログのエディターなどが該当します。
 	- project -- 複数のcomponentからなる、もしくはsection単位などの大きな単位のモジュールを定義します。
 	- utility -- わずかなスタイルの調整のための便利クラスなどを定義します。
 - page -- objectには属さない、ページ固有のスタイルを定義します。
-- theme -- 色が違う場合のスタイルを定義します。これは全体的な色合いを意味します。
 
 
 <br>
