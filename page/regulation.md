@@ -9,14 +9,19 @@
 ## is-hover
 
 スマートフォンやタブレット等のタッチデバイスでは、  
-デバイスによってはhoverが原因で二度タップしないとリンク先に飛べなかったりするのでオフにしたいと思い、  
-JavaScriptでPCのみaタグなどに `is-hover` が付与されるようにしています。  
-  
-そろそろ[hoverメディアクエリ](https://developer.mozilla.org/ja/docs/Web/CSS/@media/hover)に移行しようと思っていますが、  
-今は一旦JavaScript判定にしています。
+デバイスによってはhoverが原因で二度タップしないとリンク先に飛べなかったりします。  
+ですので、@media( hover: hover ){ を使用しhoverが可能なメディアでのみhoverを有効にします。
+
+※2022年8月まではJavaScriptで`is-hover`というクラスが付与されるかどうかで制御していました。
 
 ```
 a{
+	// mixinを使用してメディアクエリを使用
+	@include hover{
+		opacity: .6;
+	}
+	
+	// 以前までの書き方
 	&.is-hover:hover{
 		opacity: .6;
 	}
