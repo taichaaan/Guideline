@@ -124,11 +124,35 @@ WordPressの投稿タイプ名にハイフンを使用すると問題を引き�
 よく悩むクラス名をまとめました
 
 ### スライダー
-- loopslider --- 止まらずに動き続けるスライダー
-- carousel --- slickスライダー見たいなやつ
-- slider --- fadein/outのスライダー
+| name | description |
+----|---- 
+| loopslider | 止まらずに動き続けるスライダー |
+| carousel | slickスライダー見たいなやつ |
+| slider | fadein/outのスライダー |
 
-
+### ステータス
+| name | description |
+----|---- 
+| is-loading | 読み込み中 |
+| is-load | ロードした時 |
+| is-DOMContentLoaded | DOMContentLoaded |
+| is-init | 初期化した時や準備が整った時 |
+| is-set | セットした。<br>lazyloadで画像をセットした時など |
+| is-start | アニメーションが始まった時 |
+| is-active | アクティブ |
+| is-change | 変化中 |
+| is-prev | 前の要素 |
+| is-next | 次の要素 |
+| is-current | 現在 |
+| is-open | 開いた時<br>ハンバーガーメニューやアコーディオンが開いた時 |
+| is-close | 閉じた時 |
+| is-shown | 見せる<br>スクロールアニメーションなど |
+| is-visible | 見える |
+| is-hidden | 隠す |
+| is-error | エラー |
+| is-disabled | 無効 |
+| is-done | 入力済み |
+| is-clone | クローン |
 
 <br>
 
