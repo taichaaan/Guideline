@@ -27,7 +27,6 @@
 - [コメントアウト・命名規則](./page/rules.md)
 - [HTML](./page/html.md)
 - [Pug](./page/pug.md)
-- [CSS](./page/css.md)
 - [Sass](./page/sass.md)
 - [JavaScript](./page/javascript.md)
 - [WordPress](./page/wordpress.md)
